@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "avatrix-skills",
+  "owner": {
+    "name": "Avatrix",
+    "url": "https://avatrix.io"
+  },
+  "description": "Skills da Avatrix para o Claude: novelinha e fábrica de reels.",
+  "plugins": [
+    {
+      "name": "novelinha",
+      "source": "./",
+      "strict": false,
+      "version": "1.6.1",
+      "description": "Novelinha com IA na Avatrix: do link do viral até a Parte 1 montada.",
+      "skills": [
+        "./skills/novelinha"
+      ],
+      "hooks": {
+        "SessionStart": [
+          {
+            "matcher": "startup",
+            "hooks": [
+              {
+                "type": "command",
+                "command": "bash \"${CLAUDE_PLUGIN_ROOT}\"/hooks/aviso-de-versao.sh novelinha",
+                "timeout": 3
+              }
+            ]
+          }
+        ],
+        "UserPromptSubmit": [
+          {
+            "hooks": [
+              {
+                "type": "command",
+                "command": "bash \"${CLAUDE_PLUGIN_ROOT}\"/skills/novelinha/scripts/trava-sim.sh"
+              }
+            ]
+          }
+        ],
+        "PreToolUse": [
+          {
+            "matcher": ".*[Aa]vatrix.*generate_(image|video)",
+            "hooks": [
+              {
+                "type": "command",
+                "command": "bash \"${CLAUDE_PLUGIN_ROOT}\"/skills/novelinha/scripts/trava-sim.sh"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fabrica-de-reels",
+      "source": "./",
+      "strict": false,
+      "version": "0.3.9",
+      "description": "Fábrica de reels de um personagem 100% IA na Avatrix: personagem, reel clonado do viral, post agendado e DM.",
+      "skills": [
+        "./skills/fabrica-de-reels"
+      ],
+      "hooks": {
+        "SessionStart": [
+          {
+            "matcher": "startup",
+            "hooks": [
+              {
+                "type": "command",
+                "command": "bash \"${CLAUDE_PLUGIN_ROOT}\"/hooks/aviso-de-versao.sh fabrica-de-reels",
+                "timeout": 3
+              }
+            ]
+          }
+        ],
+        "UserPromptSubmit": [
+          {
+            "hooks": [
+              {
+                "type": "command",
+                "command": "bash \"${CLAUDE_PLUGIN_ROOT}\"/skills/fabrica-de-reels/scripts/trava-sim.sh"
+              }
+            ]
+          }
+        ],
+        "PreToolUse": [
+          {
+            "matcher": ".*[Aa]vatrix.*(generate_(image|video|voice|influencer|batch)|change_voice|download_social|send_message|confirm_card|edit_image|enhance_image|transfer_motion|cut_video)",
+            "hooks": [
+              {
+                "type": "command",
+                "command": "bash \"${CLAUDE_PLUGIN_ROOT}\"/skills/fabrica-de-reels/scripts/trava-sim.sh"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
