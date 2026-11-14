@@ -10,7 +10,7 @@ ev=$(campo hook_event_name)
 if [ "$ev" = "UserPromptSubmit" ]; then
   p=$(campo prompt)
   # só "sim" (ou "pode gerar") libera; "gostei", "ok", "segue" não liberam gasto
-  if printf '%s' "$p" | grep -q -i -E '(^|[^[:alpha:]])(sim|pode gerar)([^[:alpha:]]|$)' && ! printf '%s' "$p" | grep -q -i -E '^[[:space:]]*n(ã|a)o([^[:alpha:]]|$)'; then echo 1 > "$F"; fi
+  if printf '%s' "$p" | grep -q -i -E '(^|[^[:alpha:]])(sim|pode gerar)([^[:alpha:]]|$)' && ! printf '%s' "$p" | grep -q -i -E '^[[:space:]]*n(ã|a)o([^[:alpha:]]|$)'; then mkdir -p "$(dirname "$F")"; echo 1 > "$F"; fi
   exit 0
 fi
 if [ "$ev" = "PreToolUse" ]; then

@@ -40,10 +40,11 @@ Não quebre a cena em pedaços. Os cortes de câmera são do modelo.
 5. **A emoção de cada fala escrita como ação visível** no plano (o sorriso que some, a sobrancelha que desce, a mão que empurra o envelope). É assim que a atuação bate com a cena.
 6. `model: avatrix-persona-pro`, `mode: audio_to_video`, `audioUrl`, `aspectRatio: 9:16`, `resolution: 1080p`. A duração é a do áudio.
 
-## Os dois portões
+## Os três portões
 
 1. **A voz passa pelo ouvido do aluno antes de qualquer vídeo.** Gere 1 fala de cada personagem, mostre os áudios e pergunte "é essa a voz?". Sem esse "sim", não gere vídeo. Prova: 12 cenas geradas com voz de galeria lendo o texto foram reprovadas inteiras ("robóticas", "diferentes"), cerca de 300 créditos. Numa continuação, compare com a voz da parte anterior: a moça não pode sair mais grave que a senhora.
 2. **Confira se a fala voltou inteira.** `python3 S/scripts/conferir_fala.py <áudio enviado> <vídeo devolvido>`: abaixo de 85%, o pedido está fora do formato ou o modelo comeu um trecho. Confira o formato antes de refazer; refazer igual gasta de novo.
+3. **Confira o rosto de cada plano contra a ficha.** Aqui o modelo não recebe foto com gente: ele redesenha cada pessoa a cada corte, só pela ficha, e de vez em quando erra um plano inteiro. Prova: numa Parte 1 de 11 cenas, com a mesma ficha e o mesmo texto em todas, a filha saiu outra pessoa em 2 de 13 planos; quatro conferências em quadro pequeno deram "varia" e a parte foi ao ar assim. Depois de cada cena, a folha de rostos (`S/scripts/rostos.py`, fase 5, passo 5 da SKILL.md): um NÃO BATE = refazer a cena antes da próxima.
 
 Depois, o crítico do clipe como nos outros modelos. Primeiro a cena 1: mostre ao aluno e espere o "gostei" antes de qualquer outra.
 

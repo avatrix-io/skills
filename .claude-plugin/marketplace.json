@@ -11,7 +11,7 @@
       "name": "novelinha",
       "source": "./",
       "strict": false,
-      "version": "1.6.1",
+      "version": "1.7.0",
       "description": "Novelinha com IA na Avatrix: do link do viral até a Parte 1 montada.",
       "skills": [
         "./skills/novelinha"

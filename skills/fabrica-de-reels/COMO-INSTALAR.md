@@ -2,6 +2,17 @@
 
 A skill gera tudo na sua conta da **Avatrix** (imagem, voz e vídeo) e roda em dois lugares: no **site do Claude** (claude.ai, ou o aplicativo do Claude no modo conversa), só clicando, ou no **Claude Code** (o Claude no computador, que roda comandos). Usa o site? Siga só a parte "No site do Claude" e pule o resto. Nada de terminal.
 
+## O jeito mais fácil: cole esta mensagem no Claude Code
+Abra o Claude Code (no terminal ou no app) na pasta onde você quer trabalhar e cole:
+
+```text
+Instala pra mim a skill fabrica-de-reels da Avatrix: clona https://github.com/avatrix-io/skills, lê o INSTALL.md de lá e segue os passos. No fim, me diz o que eu digito pra começar.
+```
+
+Ele baixa, instala, liga a Avatrix e para pra você entrar na sua conta (`/mcp` > avatrix). Ele não pede senha. Depois, numa sessão nova, escreva "cria meu personagem".
+
+No site do Claude (claude.ai) a mensagem não funciona, porque lá o Claude não instala skill sozinho. Use a parte abaixo.
+
 ## No site do Claude (sem instalar nada)
 1. **A skill:** no claude.ai, na barra lateral, clique em Personalização > Skills > Adicionar skill > Fazer upload. Escolha o `fabrica-de-reels.zip` que você baixou na página de versões do repositório (Releases), do jeito que veio (não precisa abrir) e confirme. A skill "fabrica-de-reels" aparece ligada.
 2. **A Avatrix (o conector):** ainda em Personalização > Conectores > Adicionar conector > personalizado. Nome: `Avatrix`. Endereço: `https://avatrix.io/mcp`. Clique em Adicionar e em Vincular, entre com a sua conta da Avatrix e clique em Permitir. Tem que aparecer "Conectado".
@@ -14,8 +25,8 @@ A skill gera tudo na sua conta da **Avatrix** (imagem, voz e vídeo) e roda em d
 9. **A DM no site:** o site não roda nada sozinho. Depois do horário do post, volte na mesma conversa e escreva "fabrica dm": é aí que a DM automática liga. Quer que ela ligue sozinha? Use o Claude Code (abaixo).
 10. **Usar:** escreva "cria meu personagem" (com o link de reels de um perfil que você quer modelar, ou a sua ideia). Depois: "clona esse reel pro meu personagem" e o link do viral.
 
-## No Claude Code
-Instalou pelo plugin (o comando `/plugin install fabrica-de-reels --marketplace` do README)? Pule esta parte: a skill, a trava do sim e o aviso de versão nova já vêm ligados.
+## No Claude Code, na mão
+Instalou pela mensagem ou pelo plugin (o comando `claude plugin install fabrica-de-reels@avatrix-skills` do README)? Pule esta parte: a skill, a trava do sim e o aviso de versão nova já vêm ligados.
 
 ### 1. A pasta no lugar
 1. Crie uma pasta pro projeto (ex.: `meus-reels`) e abra ela no Claude Code.

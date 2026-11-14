@@ -10,6 +10,8 @@ Regras que valem em todo prompt (estudo 9, com fonte):
 - **3 camadas**: primeiro plano de costas/3/4 um pouco desfocado, plano do meio nítido (quem fala), fundo pequeno e meio escondido. Por cima do ombro é o plano padrão de diálogo.
 - **Negativa curta e só do que o modelo costuma inventar** (texto, logo, fila simétrica, retoque), sempre depois do positivo.
 - **A foto do 1º quadro já é meio do gesto, mão ocupada.** Foto parada vira cabeça parada com zoom lento no vídeo.
+- **Sem metáfora nem comparação** ("like a", "as if"): o modelo desenha a comparação. Objeto que não deve aparecer não é citado.
+- **Todo pedido de cena termina com o bloco de travas** (mão de cada objeto, estado que continua, quem fica calado, o que ainda não acontece): S/references/passagem-e-som.md §5.
 
 ## Ficha (1 por personagem, 16:9)
 ```

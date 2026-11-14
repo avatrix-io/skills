@@ -16,7 +16,7 @@ Fonte: estudo de 146 novelinhas do TikTok publicadas de 22/10 em diante, 7 virai
 5. **Uma confirmação de fora no meio** (TV, ligação, carta) que só o público e quem avisa veem.
 6. **Um objeto ou golpe só**, que se entende numa imagem.
 7. **O fim é pior que o começo** e **quem fecha é o vilão, com duplo sentido** ("pode ir, senhora, eu cuido muito bem dela"). Corte seco no pior momento.
-8. **Cada parte se entende sozinha.** A Parte 5 de uma série fez 2,2 mi, a Parte 3 fez 867 mil.
+8. **Cada parte se entende sozinha** (recap de 2 a 3 s da Parte 2 em diante) **e a série é planejada antes:** 3 a 5 partes, o fim de uma é a abertura da outra (S/references/historia-em-partes.md). A Parte 5 de uma série fez 2,2 mi, a Parte 3 fez 867 mil.
 9. **Diálogo quase contínuo:** 2 a 3 falas por clipe, umas 12 por minuto, no máximo 2 palavras por segundo. Medido de novo em 06/11 em "A carona do mal": fala em 84% do tempo, maior pausa 2 s, 2,9 palavras por segundo.
 10. **O fim é a fala do vilão e corta:** na Carona, 1,5 s entre a última fala e o fim.
 
