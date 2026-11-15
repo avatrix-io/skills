@@ -84,7 +84,7 @@ Lida antes e atualizada depois de cada parte. Quatro blocos:
 
 ## 7. Livro de erros da série
 
-Cada reprovação, sua ou do aluno, vira uma linha: **erro → conserto fixo**. Releia antes de escrever a parte e antes de mostrar qualquer coisa ao aluno. Linhas que já começam no livro (erros reais que custaram crédito):
+Cada reprovação, sua ou do aluno, vira uma linha: **erro → conserto fixo**. Releia antes de escrever a parte e antes de mostrar qualquer coisa ao aluno. Linhas que já começam no livro (erros reais, que custaram crédito ou refação):
 
 | Erro | Conserto fixo |
 |---|---|
@@ -96,3 +96,9 @@ Cada reprovação, sua ou do aluno, vira uma linha: **erro → conserto fixo**. 
 | pedido com a palavra do que não se quer ("no smile") | escrever o que o rosto faz |
 | parte sem efeito sonoro | coluna de som em todo plano |
 | rosto "varia um pouco" e foi ao ar | veredito por plano: BATE ou NÃO BATE |
+| a mesma pessoa duas vezes no plano aberto | contar cada personagem em todo plano aberto; recortar ou cortar o trecho |
+| close pedido saiu aberto | recorte de 1,4 a 2 vezes no rosto, na montagem |
+| personagem fora das fotos apareceu com outro rosto | linha nas travas: onde ele está (fora do quadro) e que ninguém mais aparece |
+| a voz fechou uma vogal aberta | acento só no texto da voz; legenda com a grafia normal |
+| legenda do post entregou a fala final | legenda com frase de raiva ou pergunta, sem a última fala |
+| som sumiu entre cenas; fim da peça mais alto | fundo contínuo bem baixo por lugar; ganho por fala sem vazar pro fim |

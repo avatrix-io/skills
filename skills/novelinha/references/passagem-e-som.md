@@ -51,6 +51,12 @@ The caretaker does not show the key to anyone yet; the safe is not opened yet.
 ```
 A 1ª frase do plano 1 repete o TERMINA da cena anterior; a última frase do último plano é o TERMINA desta.
 
+**Quem está na cena mas não entra nas fotos de referência** (fala de outro cômodo, espera na porta, é só citado) ganha uma linha nas travas dizendo onde está, fora do quadro, e que ninguém mais aparece:
+```
+The grandmother is in the kitchen, off screen, and never enters the frame. No other person appears in any shot.
+```
+Sem essa linha, o modelo põe a pessoa na cena com um rosto inventado, ou alguém a mais.
+
 **Barre metáfora e comparação no pedido.** "Like a", "as if", "como um", "parece": o modelo desenha a comparação ("como uma flor" vira uma flor). Escreva o que se vê. Tire também do pedido o objeto que NÃO deve aparecer: citado, ele aparece. É a mesma família do "no smile", que puxa sorriso.
 
 ## 6. Som por plano
@@ -63,7 +69,8 @@ A 1ª frase do plano 1 repete o TERMINA da cena anterior; a última frase do úl
 ## 7. Montagem
 
 `S/scripts/montar.py` junta os clipes com corte seco e um fade curtinho. Por cima disso (no CapCut, se o aluno quiser):
-- **Fundo contínuo:** um ambiente por cenário, correndo por baixo de todos os clipes daquele lugar. Cobre a diferença de fundo entre um clipe e outro.
+- **Fundo contínuo:** um ambiente por cenário, bem baixo (bem abaixo da fala), correndo por baixo de todos os clipes daquele lugar e atravessando as emendas. Cobre a diferença de fundo entre um clipe e outro, e o som nunca some no corte.
+- **Volume igualado fala por fala** (no CapCut ou no ffmpeg): o ganho vale só dentro daquela fala. Confira o fim da peça: ganho que vaza pro trecho sem fala sobe o chiado e a cartela do fim. O S/scripts/montar.py iguala por clipe, sem vazar.
 - **Emenda com som cruzado:** o som do fim da cena N continua meio segundo por baixo do começo da N+1 (a fala que passa do corte vai por cima do plano seguinte, como na fase 6).
 - **Um som subindo antes da virada principal**, só um. Depois da última fala do vilão: corte seco, sem música.
 - **Corte o defeito antes de refazer.** Plano com rosto errado ou objeto duplicado: tire o trecho, troque por outro plano da mesma cena ou leve a fala por cima de outra imagem. Refazer o clipe é o último recurso.

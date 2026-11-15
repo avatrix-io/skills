@@ -17,6 +17,11 @@ for p in plugins:
     v = (pasta / "VERSION").read_text().strip()
     if v != p.get("version"):
         print(f"ERRO {nome}: VERSION diz {v}, marketplace.json diz {p.get('version')}"); erros += 1; continue
+    # o site do Claude recusa o upload com description acima de 1024 caracteres (medido em 14/11/2026)
+    desc = next((l.split(":", 1)[1].strip() for l in (pasta / "SKILL.md").read_text().split("---")[1].splitlines()
+                 if l.startswith("description:")), "")
+    if not desc or len(desc) > 1024:
+        print(f"ERRO {nome}: description do SKILL.md com {len(desc)} caracteres (o site aceita de 1 a 1024)"); erros += 1; continue
     destino = dist / f"{nome}.zip"
     with zipfile.ZipFile(destino, "w", zipfile.ZIP_DEFLATED) as z:
         for f in sorted(pasta.rglob("*")):

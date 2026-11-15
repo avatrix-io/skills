@@ -1,6 +1,6 @@
 # Instalação feita pelo agente
 
-Este arquivo é pra você, agente (Claude Code no terminal ou no app). O usuário colou uma mensagem pedindo pra instalar uma skill da Avatrix. Siga os passos na ordem, fale com ele em português simples e diga antes o que cada comando faz.
+Este arquivo é pra você, agente (Claude Code no terminal ou no app). O usuário colou uma mensagem pedindo pra instalar uma skill da Avatrix. Siga os passos na ordem, fale com ele no idioma em que ele escreveu (português, espanhol ou inglês), simples, e diga antes o que cada comando faz.
 
 Regras:
 - Não peça senha nem token, e não digite login por ele. O único passo que é dele é entrar na conta da Avatrix (passo 5).
@@ -43,7 +43,7 @@ claude mcp add --transport http avatrix https://avatrix.io/mcp
 ```
 
 ## 5. Login (só o usuário faz)
-Pare aqui e diga a ele, com estas palavras: "Agora é com você: digite /mcp, escolha avatrix e entre na sua conta da Avatrix no navegador que abrir. Eu não vejo nem digito a sua senha."
+Pare aqui e diga a ele, com estas palavras (ou as mesmas no idioma dele): "Agora é com você: digite /mcp, escolha avatrix e entre na sua conta da Avatrix no navegador que abrir. Eu não vejo nem digito a sua senha."
 
 ## 6. ffmpeg
 `ffmpeg -version` responde? Pule. Senão, diga o comando e pergunte se pode rodar: Mac `brew install ffmpeg`; Windows `winget install ffmpeg`; Linux `sudo apt install ffmpeg`. Só rode com o ok dele.
@@ -52,4 +52,4 @@ Pare aqui e diga a ele, com estas palavras: "Agora é com você: digite /mcp, es
 Apague a cópia temporária (`rm -rf "${TMPDIR:-/tmp}/avatrix-skills"`) e diga ao usuário, numa mensagem curta:
 - o que ficou instalado e em qual pasta;
 - que precisa abrir uma sessão nova do Claude Code nessa pasta (e fazer o login do passo 5, se ainda não fez);
-- o que digitar pra começar: `faz uma novelinha` (novelinha) ou `cria meu personagem` (fábrica de reels).
+- o que digitar pra começar: `faz uma novelinha` (novelinha; em espanhol `haz una novelinha`, em inglês `make a novelinha`) ou `cria meu personagem` (fábrica de reels).

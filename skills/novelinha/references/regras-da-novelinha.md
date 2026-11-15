@@ -26,12 +26,12 @@ Fonte: estudo de 146 novelinhas do TikTok publicadas de 22/10 em diante, 7 virai
 - Rosto sempre claro e de frente. Luz de cinema (noite de chuva, lâmpada no rosto).
 - O vilão separado das vítimas, com sorriso de canto, olhos parados e meia cara na sombra.
 - Nada de texto legível na tela nem mão passando objeto no plano mais importante.
-- A fala sai do próprio vídeo, em português (testado no Avatar Pro em 10/11, numa Parte 1 inteira). Sem música na geração; uma trilha na edição. Não troque as vozes do episódio inteiro: a troca segue o tom de quem fala e deixa as vozes parecidas.
+- A fala sai do próprio vídeo, no idioma da novela (português testado no Avatar Pro em 10/11, numa Parte 1 inteira; em espanhol e inglês, ouça o clipe 1 com o aluno antes do resto). Sem música na geração; uma trilha na edição. Não troque as vozes do episódio inteiro: a troca segue o tom de quem fala e deixa as vozes parecidas.
 - Legenda: "A carona do mal" usa 1 palavra por vez, branca, negrito, contorno preto, a ~70% da altura; "O espeto de picanha" não usa nenhuma.
 - O que o público reclama: rosto que muda. Mão e objeto errado passam.
 
 ## Molde (quando o aluno não tem link)
-"A carona do mal" (@inerdvibes, 31/10, 62 s, 5,4 mi):
+"A carona do mal" (@inerdvibes, 31/10, 62 s, 5,4 mi). É um viral brasileiro: numa novela em espanhol ou inglês, use o mesmo mecanismo com a história e as falas no idioma da novela (S/references/idioma.md):
 
 | Bloco | O que faz |
 |---|---|

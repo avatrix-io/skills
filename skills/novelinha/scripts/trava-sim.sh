@@ -9,8 +9,12 @@ campo() { printf '%s' "$IN" | tr '\n' ' ' | sed -n "s/.*\"$1\"[[:space:]]*:[[:sp
 ev=$(campo hook_event_name)
 if [ "$ev" = "UserPromptSubmit" ]; then
   p=$(campo prompt)
-  # só "sim" (ou "pode gerar") libera; "gostei", "ok", "segue" não liberam gasto
-  if printf '%s' "$p" | grep -q -i -E '(^|[^[:alpha:]])(sim|pode gerar)([^[:alpha:]]|$)' && ! printf '%s' "$p" | grep -q -i -E '^[[:space:]]*n(ã|a)o([^[:alpha:]]|$)'; then mkdir -p "$(dirname "$F")"; echo 1 > "$F"; fi
+  # só o "sim" no idioma do aluno libera: sim / sí / yes (ou "pode gerar", "puedes generar", "go ahead").
+  # "si" sem acento só vale sozinho ou no começo com pontuação ("si", "si, dale"): "si quieres" é condição, não sim.
+  # "gostei", "ok", "segue", "me gusta", "nice" não liberam gasto; resposta que começa com não/no não libera.
+  if { printf '%s' "$p" | grep -q -i -E '(^|[^[:alpha:]])(sim|sí|yes|pode gerar|puedes generar|go ahead)([^[:alpha:]]|$)' \
+       || printf '%s' "$p" | grep -q -i -E '^[[:space:]]*si[[:space:]]*([.!,]|$)'; } \
+     && ! printf '%s' "$p" | grep -q -i -E '^[[:space:]]*(n(ã|a)o|no)([^[:alpha:]]|$)'; then mkdir -p "$(dirname "$F")"; echo 1 > "$F"; fi
   exit 0
 fi
 if [ "$ev" = "PreToolUse" ]; then
@@ -18,7 +22,7 @@ if [ "$ev" = "PreToolUse" ]; then
   case "$t" in *[Aa]vatrix*generate_image|*[Aa]vatrix*generate_video) ;; *) exit 0;; esac
   n=$(cat "$F" 2>/dev/null || echo 0)
   if [ "${n:-0}" -ge 1 ]; then echo $((n-1)) > "$F"; exit 0; fi
-  echo "TRAVA DO SIM: esta geração é paga e o aluno ainda não disse 'sim' pra ela. Pare, diga o que vai gerar e quantos créditos custa, e espere o aluno responder 'sim'. Um 'sim' libera UMA geração." >&2
+  echo "TRAVA DO SIM: esta geração é paga e o aluno ainda não disse 'sim' pra ela. Pare, diga o que vai gerar e quantos créditos custa, e espere o aluno responder 'sim' (em espanhol 'sí', em inglês 'yes'), no idioma da conversa. Um 'sim' libera UMA geração." >&2
   exit 2
 fi
 exit 0

@@ -1,10 +1,12 @@
 # Skills da Avatrix para o Claude
 
+**Português** · [Español](README.es.md) · [English](README.en.md)
+
 Duas skills que fazem o Claude criar vídeo com IA na sua conta da [Avatrix](https://avatrix.io), do link de um viral até o vídeo pronto pra postar. Elas mostram o preço antes e só gastam crédito depois que você responde "sim".
 
 | Skill | O que faz | Você digita | Você recebe |
 |---|---|---|---|
-| **novelinha** | Faz uma novelinha com IA: série curta vertical, em partes, com os mesmos personagens. | "faz uma novelinha" + o link de uma novelinha que está viralizando | A temporada de 3 a 5 partes esboçada, o roteiro pra aprovar, os personagens criados na sua conta e cada parte montada em mp4, uma de cada vez |
+| **novelinha** | Faz uma novelinha com IA: série curta vertical, em partes, com os mesmos personagens. Em português, espanhol ou inglês. | "faz uma novelinha" + o link de uma novelinha que está viralizando | A temporada de 3 a 5 partes esboçada, o roteiro pra aprovar, os personagens criados na sua conta e cada parte montada em mp4, uma de cada vez |
 | **fabrica-de-reels** | Cria um personagem 100% IA e clona reels virais pra ele. | "cria meu personagem" e depois "clona esse reel pro meu personagem" + o link do viral | O personagem pronto, o reel em mp4 com legenda, gancho e a palavra pra comentar e, se a sua conta tiver o Piloto Automático, o post agendado com a DM ligada |
 
 ## O que você precisa

@@ -1,5 +1,17 @@
 # Changelog
 
+## novelinha 1.7.1
+- Novela em espanhol e em inglês, além do português (que continua o padrão). A skill conversa no idioma em que você escreve e grava o idioma da série no `estado.json` (`pt`, `es` ou `en`): a fala, a voz, o país dos personagens, as hashtags, a legenda e o "PART 2?" do fim saem no idioma escolhido. Tudo o que muda de um idioma pro outro está em `references/idioma.md`. Em conversa em espanhol ou inglês, a skill não fala do curso (ele é em português).
+- A trava do "sim" no Claude Code aceita "sí" e "yes" (e "si" sozinho ou "si," no começo da resposta). "Si quieres...", "me gusta" e "nice" não liberam gasto. Teste em `tests/test_trava_sim.sh`.
+- README e COMO-INSTALAR em espanhol e em inglês, com a instalação por mensagem pronta.
+- A ficha do personagem descreve o sapato e a barra da roupa (sai de corpo inteiro), com um detalhe único por personagem e um acento de cor só na série.
+- Personagem que está na cena mas fora das fotos ganha uma linha nas travas do pedido: onde ele está (fora do quadro) e que ninguém mais aparece.
+- O crítico do clipe conta as pessoas em cada plano aberto (o modelo às vezes duplica alguém) e, quando o close sai aberto, recorta na montagem em vez de gastar de novo.
+- Palavra com vogal aberta que a voz fecha: acento só no texto da voz, legenda com a grafia normal.
+- A legenda do post não entrega a última fala da parte.
+- Som: fundo contínuo bem baixo por lugar, pra o som não sumir entre cenas, e volume igualado fala por fala sem vazar pro fim da peça.
+- O zip confere o tamanho da descrição da skill (o site do Claude recusa acima de 1024 caracteres).
+
 ## novelinha 1.7.0
 - A novelinha agora pensa na temporada inteira: antes da Parte 1, ela esboça de 3 a 5 partes, e o gancho do fim de uma é o começo da próxima.
 - Antes de gastar crédito, ela escreve a história e te mostra pra aprovar: quem é quem, o golpe, cena por cena. Só depois gera.

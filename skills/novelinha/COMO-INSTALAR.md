@@ -1,5 +1,7 @@
 # Como instalar a skill novelinha
 
+**Português** · [Español](COMO-INSTALAR.es.md) · [English](COMO-INSTALAR.en.md)
+
 A skill gera tudo na sua conta da **Avatrix** e roda em dois lugares: no **site do Claude** (claude.ai, ou o aplicativo do Claude no modo conversa), só clicando, ou no **Claude Code** (o Claude no computador, que roda comandos). Usa o site? Siga só a parte "No site do Claude" e pule o resto. Nada de terminal.
 
 ## O jeito mais fácil: cole esta mensagem no Claude Code

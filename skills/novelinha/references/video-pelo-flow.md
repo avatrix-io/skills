@@ -6,7 +6,7 @@ Arquivo de apoio da skill `novelinha`, Fase 4, caminho B. O Flow (flow.google.co
 Igual ao caminho A: `generate_image` com a foto de cada personagem em `referenceImages` (S/references/prompts.md §Foto) e a conferência da Regra 4. Salve como `novelinha/<serie>/flow/NN-inicio.png`.
 
 ## 2. O prompt de cada clipe
-O mesmo do §Vídeo de S/references/prompts.md, com a fala em português entre aspas. No Flow, a imagem de partida já carrega rosto e cenário: do clipe 2 em diante, não descreva de novo o rosto nem o fundo, só a ação, os planos e as falas. Tudo num arquivo, `novelinha/<serie>/ROTEIRO-FLOW.md`, um bloco por clipe:
+O mesmo do §Vídeo de S/references/prompts.md, com a fala no idioma da novela entre aspas e a marca do idioma (S/references/idioma.md). No Flow, a imagem de partida já carrega rosto e cenário: do clipe 2 em diante, não descreva de novo o rosto nem o fundo, só a ação, os planos e as falas. Tudo num arquivo, `novelinha/<serie>/ROTEIRO-FLOW.md`, um bloco por clipe:
 
 **CLIPE 03** · salve como `03.mp4` · 8 s · imagem `03-inicio.png`
 ```
@@ -29,6 +29,6 @@ Mande a lista do §3 como passos, com o prompt de cada clipe pra copiar. O aluno
 ## 5. Conferir
 - Um arquivo por clipe, com o nome certo.
 - `ffprobe -v error -show_entries stream=codec_type,width,height:format=duration -of csv=p=0 clipes/03.mp4`: tem que ter vídeo e áudio, altura maior que a largura e a duração perto da pedida.
-- O Veo erra pronúncia em português (tutorial de 05/11: "manipula"). Palavra quebrada: escreva separada ou troque por outra e gere de novo.
+- O Veo erra pronúncia em português (tutorial de 05/11: "manipula"); em espanhol e inglês, ouça do mesmo jeito. Palavra quebrada: escreva separada ou troque por outra e gere de novo.
 - Rosto diferente da foto: gere de novo. Depois segue igual ao caminho A: conferência (Fase 5) e montagem (Fase 6).
 - O Flow faz clipes de 8 s e o roteiro pede 9 a 12 s: no roteiro do caminho B, escreva cada clipe com 8 s e no máximo 2 falas (a Parte 1 fica com 1 ou 2 clipes a mais).
