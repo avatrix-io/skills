@@ -19,7 +19,10 @@ Os pedidos (prompts) são sempre em inglês. Só a fala, a marca da fala e as pa
 | `<PAIS>` (nacionalidade do personagem e da novela) | `Brazilian` | `Mexican` | `American` |
 | `<TV>` (o gênero da cena) | `Brazilian TV drama` | `Latin American TV drama` | `American TV drama` |
 | `<NOVELA>` (estilo da cena no Persona Pro) | `Brazilian telenovela` | `Latin American telenovela` | `American TV micro-drama` |
-| Cartela do fim (`montar.py --texto`) | `PARTE 2?` | `PARTE 2?` | `PART 2?` |
+| Fim do vídeo, parte que continua (`montar.py --idioma`, sai sozinho) | `CONTINUA...` / `Comenta PARTE N` | `CONTINUARÁ...` / `Comenta PARTE N` | `TO BE CONTINUED...` / `Comment PART N` |
+| Fim do vídeo, última parte (`montar.py --fim segue`) | `ME SEGUE` / `que tem mais novela` | `SÍGUEME` / `que hay más novelas` | `FOLLOW ME` / `for more dramas` |
+| Última fala da última parte (o protagonista olhando pra câmera) | "Gostou? Me segue, que tem mais." | "¿Les gustó? Síganme, que hay más." | "Liked it? Follow me, there's more." |
+| Cartela antiga (`montar.py --fim cartela`) | `PARTE N?` | `PARTE N?` | `PART N?` |
 | Nome do arquivo que o aluno baixa (vídeo final, teste, storyboard) | `parte-1.mp4`, `parte-1-teste.mp4`, `storyboard-01.png` | `parte-1.mp4`, `parte-1-prueba.mp4`, `storyboard-01.png` | `part-1.mp4`, `part-1-test.mp4`, `storyboard-01.png` |
 
 - Espanhol: o padrão é o mexicano (o maior público de novela em espanhol). Se o aluno disser o país (Colômbia, Argentina, Espanha...), troque o `<PAIS>` pelo dele (`Colombian`, `Argentine`, `Spanish`) e, na Espanha, `<TRILHA>` vira `Castilian Spanish dialogue track` e `<SOTAQUE>` `natural Castilian Spanish delivery`.
@@ -46,12 +49,14 @@ As hashtags de `pt` saíram do estudo de 05/11/2026. As de `es` e `en` são o po
 ## Postar (fase 7), por idioma
 | | `pt` | `es` | `en` |
 |---|---|---|---|
-| Título | "<gancho em até 6 palavras>… Parte 1" | "<gancho>… Parte 1" | "<hook in up to 6 words>… Part 1" |
-| Legenda (frase que dá raiva ou pergunta) | "Ele avisou. Ninguém acreditou." / "Você abriria a porta pra ela?" | "Él avisó. Nadie le creyó." / "¿Tú le abrirías la puerta?" | "He warned them. Nobody listened." / "Would you let her in?" |
-| Hashtags (3 a 5) | #novelinha #novelaia #novelinhaia #parte1 | #novelaia #telenovela #historiasconia #parte1 | #aidrama #microdrama #aistory #part1 |
-| Nunca escrever (Regra 8) | "comenta PARTE 2", "comenta pra ver a parte 2" | "comenta PARTE 2", "comenta para ver la parte 2" | "comment PART 2", "comment for part 2" |
+| 1ª linha da legenda | "Parte 1 \| <título com a injustiça>" | "Parte 1 \| <título>" | "Part 1 \| <title>" |
+| Legenda (frase que dá raiva e pergunta) | "Ele avisou. Ninguém acreditou." / "Você abriria a porta pra ela?" | "Él avisó. Nadie le creyó." / "¿Tú le abrirías la puerta?" | "He warned them. Nobody listened." / "Would you let her in?" |
+| Hashtags (3 a 6) | #novelinha #novelaia #novelinhaia #parte1 | #novelaia #telenovela #historiasconia #parte1 | #aidrama #microdrama #aistory #part1 |
+| Comentário fixado, parte que continua | "Você perdoaria ela? 👇 Quer a PARTE 2? Comenta PARTE 2!" | "¿Tú la perdonarías? 👇 ¿Quieres la PARTE 2? ¡Comenta PARTE 2!" | "Would you forgive her? 👇 Want PART 2? Comment PART 2!" |
+| Comentário fixado, última parte | "Gostou? Me segue, que amanhã tem novela nova!" | "¿Te gustó? ¡Sígueme, que mañana hay novela nueva!" | "Liked it? Follow me, a new drama drops tomorrow!" |
+| Nunca escrever (Regra 8 d) | "comenta que eu te mando a parte 2 no direct" | "comenta y te mando la parte 2 por DM" | "comment and I'll DM you part 2" |
 
-Antes de mandar a legenda, releia no idioma dela: tem "parte 2"/"part 2" junto de comenta, comente, comentar, comment ou drop? Reescreva.
+Antes de mandar a legenda e o comentário fixado, releia no idioma deles: promete mandar a parte por direct ou DM? Reescreva. A próxima parte sai no perfil, de graça.
 
 ## O "sim" do aluno
 O que libera uma geração é o "sim" no idioma do aluno: **"sim"** em português, **"sí"** em espanhol (ou "si" sozinho, ou "si," no começo da resposta), **"yes"** em inglês. "Pode gerar", "puedes generar", "go ahead" também liberam. "Gostei", "me gusta", "ok", "nice" não liberam (Regra 1). A trava do Claude Code (S/scripts/trava-sim.sh) aceita as três palavras.

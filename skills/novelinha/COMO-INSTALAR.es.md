@@ -57,10 +57,7 @@ La skill solo gasta créditos después de tu "sí", y eso lo bloquea la máquina
 ```
 Cierra y abre Claude Code de nuevo (solo lee el candado al abrir). Prueba: pide "genera una imagen de prueba" sin decir sí antes; tiene que aparecer "TRAVA DO SIM" y la skill tiene que detenerse y preguntar.
 
-### 5. (Solo para el camino económico) Claude en Chrome
-El camino por Google Flow usa el navegador. Instala la extensión Claude in Chrome (chromewebstore.google.com/detail/fcoeoabgfenejglbffodgkkbkcdhcgfn), entra con la misma cuenta de Claude Code y deja Chrome abierto, con tu cuenta de Google iniciada. Sin ella, la skill te pasa los pasos de Flow para que hagas clic tú.
-
-### 6. Usar
+### 5. Usar
 - Escribe: "haz una novelinha" y manda el link de una novela que se esté haciendo viral, o cuenta tu idea.
 - La skill crea los personajes en Avatrix, muestra el guion, genera el clip 1 para que lo veas y solo sigue con tu "sí".
 - Se detuvo a la mitad: "novelinha continúa".
@@ -72,7 +69,6 @@ La skill te responde en el idioma en que le escribes y la novela sale en ese idi
 La skill cotiza cada generación en el momento, con el precio que devuelve Avatrix, y muestra el total de la Parte 1 en créditos antes del primer "sí".
 - El video sale en **Avatar Pro** (la escena con los personajes hablando juntos) o en **Persona Pro** (la voz de cada uno siempre igual, o "la calidad más alta": 1080p). No tienes que elegir.
 - Otro modelo, solo si lo pides por su nombre.
-- Por Google Flow (más barato, más lento): las fotos salen de Avatrix y los videos del crédito de tu plan de Google.
 En Avatar Pro la voz sale del propio video. Cambiar la voz de una frase que salió mal se cotiza antes, por segundo.
 
 ## Quién la hizo

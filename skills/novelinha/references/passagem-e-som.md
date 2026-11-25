@@ -36,9 +36,9 @@ Um ajudante que NÃO escreveu a parte (subagente; no site, você mesmo num bloco
 
 Ele não recebe a bíblia, a escaleta nem a sua opinião. Devolve:
 - cada momento "do nada": onde (cena e plano), o que falta pra entender, gravidade **MATA**, **ATRAPALHA** ou **DETALHE**;
-- uma nota de 0 a 10 pra "dá pra entender assistindo uma vez".
+- duas notas de 0 a 10: `entender` ("dá pra entender assistindo uma vez") e `quer_p2` ("comentaria pedindo a próxima parte, com raiva do vilão").
 
-**Passa com nota 8 ou mais e nenhum MATA nem ATRAPALHA.** Achado sem lugar e sem motivo não vale. Depois disso, mostre o texto ao aluno e espere o "sim" do texto. Só então sai crédito.
+**Passa com as duas notas em 8 ou mais e nenhum MATA nem ATRAPALHA.** Na Parte 1, item da Régua de S/references/metodo-atual.md que falha conta como MATA. Achado sem lugar e sem motivo não vale. Não passou: conserto cirúrgico e nova leitura, até 4 (S/references/metodo-atual.md §Leitor frio). Depois disso, mostre o texto ao aluno e espere o "sim" do texto. Só então sai crédito.
 
 ## 5. Pedido de cena: bloco de travas no fim
 
@@ -68,9 +68,9 @@ Sem essa linha, o modelo põe a pessoa na cena com um rosto inventado, ou algué
 
 ## 7. Montagem
 
-`S/scripts/montar.py` junta os clipes com corte seco e um fade curtinho. Por cima disso (no CapCut, se o aluno quiser):
+`S/scripts/montar.py` junta os clipes com corte seco e um fade curtinho, deixa tudo em -15 LUFS, põe um ruído bem baixo por baixo de tudo (sem buraco de silêncio digital entre as falas), escreve o fim por cima da última cena e confere os portões (S/references/metodo-atual.md §Portões). Por cima disso (no CapCut, se o aluno quiser):
 - **Fundo contínuo:** um ambiente por cenário, bem baixo (bem abaixo da fala), correndo por baixo de todos os clipes daquele lugar e atravessando as emendas. Cobre a diferença de fundo entre um clipe e outro, e o som nunca some no corte.
-- **Volume igualado fala por fala** (no CapCut ou no ffmpeg): o ganho vale só dentro daquela fala. Confira o fim da peça: ganho que vaza pro trecho sem fala sobe o chiado e a cartela do fim. O S/scripts/montar.py iguala por clipe, sem vazar.
+- **Volume igualado fala por fala** (no ffmpeg da conversa): o ganho vale só dentro daquela fala. Confira o fim da peça: ganho que vaza pro trecho sem fala sobe o chiado do fim. O S/scripts/montar.py iguala por clipe, sem vazar.
 - **Emenda com som cruzado:** o som do fim da cena N continua meio segundo por baixo do começo da N+1 (a fala que passa do corte vai por cima do plano seguinte, como na fase 6).
 - **Um som subindo antes da virada principal**, só um. Depois da última fala do vilão: corte seco, sem música.
 - **Corte o defeito antes de refazer.** Plano com rosto errado ou objeto duplicado: tire o trecho, troque por outro plano da mesma cena ou leve a fala por cima de outra imagem. Refazer o clipe é o último recurso.

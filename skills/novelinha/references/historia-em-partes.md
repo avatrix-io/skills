@@ -16,7 +16,7 @@ Nenhum crédito sai antes da história conferida e do "sim" do aluno no TEXTO. U
 
 ## 1. Temporada, antes da Parte 1
 
-Esboce de 3 a 5 partes antes de escrever a primeira. Uma linha por parte: título, o golpe e o objeto da parte, o gancho de abertura e o gancho do fim. Só a Parte 1 vira roteiro agora; as outras são direção.
+Esboce a temporada antes de escrever a primeira parte: 3 partes por padrão (no jeito fiel, o número de partes do original, até 5; S/references/metodo-atual.md §Fiel e adaptado). Uma linha por parte: título, o golpe e o objeto da parte, o gancho de abertura e o gancho do fim. Só a Parte 1 vira roteiro agora; as outras são direção.
 
 Regras:
 - **O gancho do fim da parte N é a abertura da N+1.** A Parte 2 começa onde a 1 cortou.

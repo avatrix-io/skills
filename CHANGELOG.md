@@ -1,5 +1,20 @@
 # Changelog
 
+## novelinha 1.8.0
+A skill passa a seguir o método que a fábrica de novelinhas da Avatrix usa hoje (16 a 24/11/2026). O detalhe e a fonte de cada regra estão em `references/metodo-atual.md`.
+- **Cabeçalho do SKILL.md corrigido:** a descrição vai entre aspas. Sem elas, o texto com dois-pontos no meio quebrava o cabeçalho e o Claude podia não carregar a skill (vinha da 1.7.1).
+- **Fiel ou adaptado:** quando o viral tem as próximas partes no ar, a nossa Parte k copia a Parte k dele cena a cena (mesma ordem de falas e viradas, mesma duração ±10%, mesmo número de partes), trocando só elenco, lugar e jeito de falar. Sem continuação no ar: a mesma virada, humilhação e desforra numa história nossa de 3 partes.
+- **Temporada de 3 partes por padrão** (até 5 no fiel). Parte 2 na mesma noite da Parte 1 e Parte 3 no dia seguinte.
+- **Régua da Parte 1,** medida nas partes que escalaram contra a que caiu: 1ª fala em até 0,5 s com o vilão humilhando a vítima na cara, pelo menos 8 falas de desprezo, pelo menos 5 viradas, um segredo a favor da vítima antes do fim, o vilão confiante e errado na última fala, e quem entra no meio sem saber de nada.
+- **Gente e roupa:** lugar com gente leva o público no prompt, no vídeo e no som; troca de roupa escrita inteira e repetida dali em diante; roupa nunca vai na lista de objetos.
+- **Leitor frio com duas notas** (`entender` e `quer_p2`, as duas em 8 ou mais), até 4 leituras, com conserto só nas cenas que ele citou.
+- **Fim e legenda como os virais** (27 novelinhas medidas, de 3 a 17/11): a parte que continua fecha com "CONTINUA..." e "Comenta PARTE N" por cima do último segundo, com o último quadro parado, sem tela preta; a última parte fecha com o protagonista pedindo pra seguir; legenda "Parte N | título" e comentário fixado. A regra antiga que proibia "comenta PARTE 2" saiu. A parte nunca é prometida por direct.
+- **Fundo de estúdio:** conferência, em cada plano, de que atrás das pessoas aparece o lugar, e não o fundo cinza liso da ficha.
+- **Persona Pro na prática:** o take volta a 24 qps, até 8 vídeos na fila (o 9º volta erro sem cobrar) e take curto cobra o mínimo.
+- **`scripts/montar.py` novo:** fim por cima da cena (`--fim continua|segue|cartela|nenhum`, `--parte`, `--idioma`), @ do perfil no canto (`--arroba`), -15 LUFS, ruído bem baixo contra buraco de silêncio, portões no fim (sai com erro se o volume ou o silêncio reprovar) e a versão limpa da parte, sem o fim, pro YouTube. Converte o take de 24 qps pelo tempo.
+- **Tudo dentro da Avatrix:** saiu o caminho econômico pelo Google Flow (e a extensão do Chrome que ele pedia) e o acabamento no CapCut. Imagem, voz, vídeo, montagem e post acontecem na Avatrix e na própria conversa.
+- **`scripts/longo.py` e fase 8 (novo):** o longo do YouTube da série fechada, em 16:9 com a parte no meio e ela mesma desfocada dos lados, sem cartela entre as partes, 6 s finais pedindo "Comenta PARTE 2" e inscrição, capítulos prontos pra descrição, e o modelo de título, descrição e comentário fixado.
+
 ## fabrica-de-reels 0.4.0
 - **3 rodadas de crítica em todo reel**, cada uma antes do gasto que ela protege: o roteiro antes do "sim" do reel, as falas antes de pagar o vídeo e o reel montado antes de te mostrar. Em cada rodada, 3 críticos independentes (no Claude Code, subagentes; no site, o Claude faz um por vez); até 3 voltas, consertando só o que mata. Fica tudo em `criticas.md`, na pasta do reel. Regras em `references/criticos.md`.
 - **Mecanismo ou casca:** antes do roteiro, a skill separa o que faz o viral prender (sai do vídeo, ele para de funcionar) do que é só enfeite. O roteiro copia o mecanismo, no mesmo lugar e no mesmo tempo, e não copia a casca nem o produto do outro.
