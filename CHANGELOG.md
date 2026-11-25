@@ -1,5 +1,9 @@
 # Changelog
 
+## fabrica-de-reels 0.5.1 · novelinha 1.8.1 (25/11/2026)
+- **O site do Claude mudou de menu.** Skills e conectores não ficam mais em Personalização: agora é clicar no seu nome > Configurações > Plugins > Adicionar > "Fazer upload de plugin" (o zip, do jeito que veio) e, pro conector, "Adicionar conector personalizado" (Nome `Avatrix`, URL do servidor MCP `https://avatrix.io/mcp`, Continuar). A internet fica em Configurações > Recursos: ligar "Criar e editar arquivos" e "Usar a internet ao criar arquivos" e, em Sites permitidos > Gerenciar, adicionar `*.avatrix.io`. Instalação, README, aviso de versão nova e ajuda dentro das skills seguem a tela nova; quem ainda vê a tela antiga recebe o caminho antigo numa linha.
+- Nada mudou no jeito de fazer reel ou novelinha.
+
 ## fabrica-de-reels 0.5.0
 - **A voz fica guardada na ficha do personagem.** Toda fala sai da Avatrix na voz que o aluno escolheu, lida da ficha, igual em todo reel. Quem vem da versão anterior: antes do próximo reel, a skill confere a voz na ficha (não cobra).
 - **Uma fala por frase, juntadas por cena.** Cada frase do roteiro vira uma fala, em lotes de até 12 (no site, um "Permitir uma vez" vale pelo lote inteiro), e as falas de cada cena se juntam na própria Avatrix com a pausa certa entre elas (juntar não cobra). Só a frase que sai errada se refaz, que é barata; nunca a cena inteira.

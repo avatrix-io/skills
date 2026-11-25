@@ -19,17 +19,17 @@ A mesma mensagem serve no Claude Code e no site ou no app do Claude. Abra o Clau
 
 **Novelinha:**
 ```text
-Instala pra mim a skill novelinha da Avatrix. O passo a passo está em https://raw.githubusercontent.com/avatrix-io/skills/main/INSTALL.md: lê e segue. No Claude Code, faz tudo sozinho. No site ou no app do Claude, me guia nos cliques, um por vez: baixar https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip, subir em Personalização > Skills e ligar o conector da Avatrix com o endereço https://avatrix.io/mcp. No fim, me diz o que eu digito pra começar.
+Instala pra mim a skill novelinha da Avatrix. O passo a passo está em https://raw.githubusercontent.com/avatrix-io/skills/main/INSTALL.md: lê e segue. No Claude Code, faz tudo sozinho. No site ou no app do Claude, me guia nos cliques, um por vez: baixar https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip, subir em Configurações > Plugins e ligar o conector da Avatrix com o endereço https://avatrix.io/mcp. No fim, me diz o que eu digito pra começar.
 ```
 
 **Fábrica de reels:**
 ```text
-Instala pra mim a skill fabrica-de-reels da Avatrix. O passo a passo está em https://raw.githubusercontent.com/avatrix-io/skills/main/INSTALL.md: lê e segue. No Claude Code, faz tudo sozinho. No site ou no app do Claude, me guia nos cliques, um por vez: baixar https://github.com/avatrix-io/skills/releases/latest/download/fabrica-de-reels.zip, subir em Personalização > Skills e ligar o conector da Avatrix com o endereço https://avatrix.io/mcp. No fim, me diz o que eu digito pra começar.
+Instala pra mim a skill fabrica-de-reels da Avatrix. O passo a passo está em https://raw.githubusercontent.com/avatrix-io/skills/main/INSTALL.md: lê e segue. No Claude Code, faz tudo sozinho. No site ou no app do Claude, me guia nos cliques, um por vez: baixar https://github.com/avatrix-io/skills/releases/latest/download/fabrica-de-reels.zip, subir em Configurações > Plugins e ligar o conector da Avatrix com o endereço https://avatrix.io/mcp. No fim, me diz o que eu digito pra começar.
 ```
 
 **As duas:**
 ```text
-Instala pra mim as duas skills da Avatrix, novelinha e fabrica-de-reels. O passo a passo está em https://raw.githubusercontent.com/avatrix-io/skills/main/INSTALL.md: lê e segue. No Claude Code, faz tudo sozinho, cada skill na sua pasta. No site ou no app do Claude, me guia nos cliques, um por vez: baixar https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip e https://github.com/avatrix-io/skills/releases/latest/download/fabrica-de-reels.zip, subir os dois em Personalização > Skills e ligar o conector da Avatrix com o endereço https://avatrix.io/mcp. No fim, me diz o que eu digito pra começar em cada uma.
+Instala pra mim as duas skills da Avatrix, novelinha e fabrica-de-reels. O passo a passo está em https://raw.githubusercontent.com/avatrix-io/skills/main/INSTALL.md: lê e segue. No Claude Code, faz tudo sozinho, cada skill na sua pasta. No site ou no app do Claude, me guia nos cliques, um por vez: baixar https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip e https://github.com/avatrix-io/skills/releases/latest/download/fabrica-de-reels.zip, subir os dois em Configurações > Plugins e ligar o conector da Avatrix com o endereço https://avatrix.io/mcp. No fim, me diz o que eu digito pra começar em cada uma.
 ```
 
 O que o Claude faz com a mensagem está no [INSTALL.md](INSTALL.md): no Claude Code, baixa este repositório, instala a skill (pelo sistema de plugins, que já traz a trava do "sim" e o aviso de versão nova), liga a conexão da Avatrix e para pra você fazer o login; no site, te passa os cliques abaixo, um de cada vez. Ele não pede senha.
@@ -38,8 +38,8 @@ Prefere fazer sozinho? Os cliques estão logo abaixo.
 
 ### No site ou no aplicativo do Claude, modo conversa (zip)
 1. Baixe o arquivo da skill: [novelinha.zip](https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip) ou [fabrica-de-reels.zip](https://github.com/avatrix-io/skills/releases/latest/download/fabrica-de-reels.zip).
-2. No Claude, vá em Personalização > Skills > Adicionar skill > Fazer upload e escolha o zip, sem abrir.
-3. Ligue a Avatrix em Personalização > Conectores > Adicionar conector > personalizado: nome `Avatrix`, endereço `https://avatrix.io/mcp`. Clique em Vincular e entre na sua conta.
+2. No Claude, vá no seu nome > Configurações > Plugins > Adicionar > Fazer upload de plugin e escolha o zip, sem abrir. (Tela antiga, com Personalização no menu: Personalização > Skills > Adicionar skill > Fazer upload.)
+3. Ligue a Avatrix em Plugins > Adicionar > Adicionar conector personalizado: nome `Avatrix`, URL do servidor MCP `https://avatrix.io/mcp`. Clique em Continuar e entre na sua conta. (Tela antiga: Personalização > Conectores > Adicionar conector > personalizado.)
 4. Abra uma conversa nova e escreva "faz uma novelinha" ou "cria meu personagem".
 
 O passo a passo completo, com o ajuste de internet que a skill precisa, está no `COMO-INSTALAR.md` de cada skill: [novelinha](skills/novelinha/COMO-INSTALAR.md) · [fábrica de reels](skills/fabrica-de-reels/COMO-INSTALAR.md).
@@ -57,7 +57,7 @@ Pra fábrica de reels, troque `novelinha` por `fabrica-de-reels`. Depois, dentro
 
 ## Atualizar
 - **Claude Code (instalado pelo plugin):** quando sai versão nova, aparece uma linha no começo da sessão com o comando: `claude plugin update novelinha@avatrix-skills` (ou `fabrica-de-reels@avatrix-skills`). Depois abra o Claude Code de novo. Instalou copiando a pasta? Não aparece aviso: cole de novo a mensagem de instalação.
-- **Site do Claude:** a skill avisa no começo da conversa, quando a conversa tem acesso à web. Pra atualizar, baixe o zip de novo (links acima) e suba no lugar do antigo em Personalização > Skills.
+- **Site do Claude:** a skill avisa no começo da conversa, quando a conversa tem acesso à web. Pra atualizar, baixe o zip de novo (links acima) e suba no lugar do antigo em Configurações > Plugins > Adicionar > Fazer upload de plugin.
 
 ## Perguntas comuns
 **Quanto custa?** A skill cota cada geração na Avatrix e mostra o preço em créditos antes. Sem o seu "sim", ela não gera nada.

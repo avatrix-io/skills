@@ -19,7 +19,7 @@ La otra skill del repositorio, **fabrica-de-reels**, por ahora solo funciona en 
 El mismo mensaje sirve en Claude Code y en el sitio o la app de Claude. Abre Claude (en Claude Code, en la carpeta donde quieres trabajar) y pega:
 
 ```text
-Instálame la skill novelinha de Avatrix. Los pasos están en https://raw.githubusercontent.com/avatrix-io/skills/main/INSTALL.md: léelo y síguelo. En Claude Code, hazlo todo tú. En el sitio o la app de Claude, guíame en los clics, uno a la vez: descargar https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip, cargarlo en Personalizar > Habilidades y añadir el conector de Avatrix con la URL https://avatrix.io/mcp. Al final, dime qué escribo para empezar.
+Instálame la skill novelinha de Avatrix. Los pasos están en https://raw.githubusercontent.com/avatrix-io/skills/main/INSTALL.md: léelo y síguelo. En Claude Code, hazlo todo tú. En el sitio o la app de Claude, guíame en los clics, uno a la vez: descargar https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip, cargarlo en Configuración > Plugins (o Personalizar > Habilidades en la pantalla antigua) y añadir el conector de Avatrix con la URL https://avatrix.io/mcp. Al final, dime qué escribo para empezar.
 ```
 
 En Claude Code, Claude descarga, instala, conecta Avatrix y te dice qué escribir. En el sitio, te guía clic por clic. Tú solo entras a tu cuenta de Avatrix cuando te lo pida. No pide contraseña. Lo que hace con el mensaje está en el [INSTALL.md](INSTALL.md) (en portugués; Claude lo lee igual).
@@ -28,8 +28,8 @@ En Claude Code, Claude descarga, instala, conecta Avatrix y te dice qué escribi
 
 ### En el sitio o en la app de Claude (sin terminal)
 1. Descarga el archivo de la skill: [novelinha.zip](https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip).
-2. En Claude, ve a Personalizar > Habilidades > + > Crear habilidad > Cargar una habilidad y elige el zip, sin descomprimirlo.
-3. Conecta Avatrix en Personalizar > Conectores > + Añadir > Añadir conector personalizado: nombre `Avatrix`, URL `https://avatrix.io/mcp`. Sigue con Continuar hasta Añadir y entra a tu cuenta de Avatrix.
+2. En Claude, ve a tu nombre > Configuración > Plugins > Añadir, elige la opción de subir un plugin y el zip, sin descomprimirlo (pantalla antigua: Personalizar > Habilidades > + > Crear habilidad > Cargar una habilidad).
+3. Conecta Avatrix en Plugins > Añadir > Añadir conector personalizado (pantalla antigua: Personalizar > Conectores > + Añadir > Añadir conector personalizado): nombre `Avatrix`, URL `https://avatrix.io/mcp`. Sigue con Continuar hasta Añadir y entra a tu cuenta de Avatrix.
 4. Abre una conversación nueva y escribe "haz una novelinha".
 
 El paso a paso completo, con el ajuste de red que la skill necesita, está en [COMO-INSTALAR.es.md](skills/novelinha/COMO-INSTALAR.es.md).
@@ -51,7 +51,7 @@ La skill te responde en el idioma en que le escribes. Si escribes en español, l
 
 ## Actualizar
 - **Claude Code:** cuando sale una versión nueva, aparece una línea al inicio de la sesión con el comando: `claude plugin update novelinha@avatrix-skills`. Después abre Claude Code de nuevo.
-- **Sitio de Claude:** la skill avisa al inicio de la conversación, cuando la conversación tiene acceso a la web. Para actualizar, descarga el zip de nuevo (link de arriba) y súbelo en lugar del anterior en Personalizar > Habilidades.
+- **Sitio de Claude:** la skill avisa al inicio de la conversación, cuando la conversación tiene acceso a la web. Para actualizar, descarga el zip de nuevo (link de arriba) y súbelo en lugar del anterior en Configuración > Plugins (pantalla antigua: Personalizar > Habilidades).
 
 ## Preguntas frecuentes
 **¿Cuánto cuesta?** La skill cotiza cada generación en Avatrix y te muestra el precio en créditos antes. Sin tu "sí", no genera nada.
