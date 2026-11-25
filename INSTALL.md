@@ -41,11 +41,13 @@ Tem o comando `claude plugin` (`claude plugin --help` responde)? Use o plugin, q
 claude plugin marketplace add avatrix-io/skills    # se já existir, rode: claude plugin marketplace update avatrix-skills
 claude plugin install <skill>@avatrix-skills --scope project
 ```
+Na fábrica de reels, junte também ao `.claude/settings.json` da pasta de trabalho (crie se não existir; sem apagar o que já está lá) o bloco `permissions` do passo "A trava do sim" do `COMO-INSTALAR.md` dela (em `${TMPDIR:-/tmp}/avatrix-skills/skills/fabrica-de-reels/COMO-INSTALAR.md`): o plugin não traz a confirmação na tela antes de repostar, mandar DM à mão e responder comentário.
+
 Sem `claude plugin`: copie a skill pro projeto e ligue a trava à mão.
 ```bash
 mkdir -p .claude/skills && cp -R "${TMPDIR:-/tmp}/avatrix-skills/skills/<skill>" .claude/skills/
 ```
-Depois a trava: siga o passo "A trava do sim" do `COMO-INSTALAR.md` da skill (`.claude/skills/<skill>/COMO-INSTALAR.md`). Se `.claude/settings.json` já existir, junte o bloco `hooks` ao que já está lá, sem apagar nada.
+Depois a trava: siga o passo "A trava do sim" do `COMO-INSTALAR.md` da skill (`.claude/skills/<skill>/COMO-INSTALAR.md`). Se `.claude/settings.json` já existir, junte os blocos `hooks` e `permissions` (este, na fábrica de reels) ao que já está lá, sem apagar nada. Na cópia não há aviso de versão nova: pra atualizar, rode este passo de novo.
 
 ## 3. Conferir que carregou
 - Plugin: `claude plugin list` mostra `<skill>@avatrix-skills` com status ligado.
@@ -64,6 +66,8 @@ Pare aqui e diga a ele, com estas palavras (ou as mesmas no idioma dele): "Agora
 
 ## 6. ffmpeg
 `ffmpeg -version` responde? Pule. Senão, diga o comando e pergunte se pode rodar: Mac `brew install ffmpeg`; Windows `winget install ffmpeg`; Linux `sudo apt install ffmpeg`. Só rode com o ok dele.
+
+Na fábrica de reels, confira também `python3 --version` (os scripts dela pedem o Python 3). Não responde: Mac `xcode-select --install`; Windows `winget install Python.Python.3.12`; Linux `sudo apt install python3`; só com o ok dele. No Windows, a trava roda no Git Bash (vem com o Git).
 
 ## 7. Fechar
 Apague a cópia temporária (`rm -rf "${TMPDIR:-/tmp}/avatrix-skills"`) e diga ao usuário, numa mensagem curta:

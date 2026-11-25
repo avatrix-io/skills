@@ -4,8 +4,8 @@
   reel:   python3 medir_voz.py reel cenas/01.mp4 cenas/02.mp4 ...   a RÉGUA: cada cena contra a mediana das cenas do próprio
           reel. Até 2,5 semitons passa; de 2,5 a 4 avisa (o aluno ouve); acima de 4 refaz. Sai com 1 se alguma pede refazer.
           A mesma voz varia de uma fala pra outra (a entonação muda): comparar com uma fala de teste só reprova cena boa.
-  tom:    python3 medir_voz.py tom fala.mp3 [--ref 158]     só imprime o tom (e a distância de uma referência, se der)
-  ritmo:  python3 medir_voz.py ritmo fala.mp3 "o texto da fala"   palavras por segundo (pela duração do arquivo)
+  tom:    python3 medir_voz.py tom fala.mp3 [--ref 158]     só imprime o tom (e a distância de uma referência, se der; --ref 0 ou negativo para com erro: meça antes o tom da voz-alvo)
+  (palavras por segundo: python3 conferir_fala.py ritmo <arquivo> "<fala>", a régua única do ritmo)
   teste:  python3 medir_voz.py teste
 """
 import argparse, array, math, subprocess, sys, tempfile, pathlib
@@ -31,10 +31,10 @@ def tom(arquivo):
     energias = [sum(v * v for v in x[i:i + n]) for i in range(0, len(x) - n - lag_max, hop)]
     if not energias:
         return None
-    corte = sorted(energias)[len(energias) // 2]  # só os quadros mais altos que a mediana (onde tem fala)
+    corte = sorted(energias)[len(energias) // 2]  # só os quadros da mediana pra cima (onde tem fala)
     f0s = []
     for k, i in enumerate(range(0, len(x) - n - lag_max, hop)):
-        if energias[k] <= corte or energias[k] == 0:
+        if energias[k] < corte or energias[k] == 0:  # "<": som contínuo (todos iguais à mediana) não pode sumir inteiro
             continue
         q = x[i:i + n + lag_max]
         e0 = energias[k]
@@ -105,7 +105,6 @@ def main():
     p = argparse.ArgumentParser(); s = p.add_subparsers(dest="c", required=True)
     a = s.add_parser("tom"); a.add_argument("arquivo"); a.add_argument("--ref", type=float)
     rl = s.add_parser("reel"); rl.add_argument("arquivos", nargs="+")
-    b = s.add_parser("ritmo"); b.add_argument("arquivo"); b.add_argument("texto")
     s.add_parser("teste")
     o = p.parse_args()
     if o.c == "teste":
@@ -118,10 +117,8 @@ def main():
             print(f"{pathlib.Path(a).name}: " + (f"tom {f:.1f} Hz · {st:+.1f} semitons da mediana · {v}" if f else v))
         print(f"mediana do reel: {med:.1f} Hz")
         sys.exit(1 if any(v == "REFAZ" for *_, v in linhas) else 0)
-    if o.c == "ritmo":
-        pal = len(o.texto.split())
-        print(f"{pal} palavras em {duracao(o.arquivo):.2f} s = {pal / duracao(o.arquivo):.2f} palavras por segundo")
-        return
+    if o.ref is not None and o.ref <= 0:
+        sys.exit("ERRO: --ref <= 0: a referência do tom está vazia. Meça antes o tom da voz-alvo e grave em tom_hz")
     f = tom(o.arquivo)
     if f is None:
         sys.exit("não achei voz nesse arquivo")

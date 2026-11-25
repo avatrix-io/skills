@@ -53,10 +53,10 @@ claude plugin install novelinha@avatrix-skills --scope project
 claude mcp add --transport http avatrix https://avatrix.io/mcp
 ```
 
-Pra fábrica de reels, troque `novelinha` por `fabrica-de-reels`. Depois, dentro do Claude Code, `/mcp` > avatrix > login, e instale o ffmpeg (`brew install ffmpeg` no Mac, `winget install ffmpeg` no Windows).
+Pra fábrica de reels, troque `novelinha` por `fabrica-de-reels`. Depois, dentro do Claude Code, `/mcp` > avatrix > login, e instale o ffmpeg (`brew install ffmpeg` no Mac, `winget install ffmpeg` no Windows). Na fábrica de reels, junte também ao `.claude/settings.json` do projeto o bloco `permissions` do passo 4 do [COMO-INSTALAR.md dela](skills/fabrica-de-reels/COMO-INSTALAR.md) (o plugin não traz) e confira o `python3 --version`.
 
 ## Atualizar
-- **Claude Code:** quando sai versão nova, aparece uma linha no começo da sessão com o comando: `claude plugin update novelinha@avatrix-skills` (ou `fabrica-de-reels@avatrix-skills`). Depois abra o Claude Code de novo.
+- **Claude Code (instalado pelo plugin):** quando sai versão nova, aparece uma linha no começo da sessão com o comando: `claude plugin update novelinha@avatrix-skills` (ou `fabrica-de-reels@avatrix-skills`). Depois abra o Claude Code de novo. Instalou copiando a pasta? Não aparece aviso: cole de novo a mensagem de instalação.
 - **Site do Claude:** a skill avisa no começo da conversa, quando a conversa tem acesso à web. Pra atualizar, baixe o zip de novo (links acima) e suba no lugar do antigo em Personalização > Skills.
 
 ## Perguntas comuns

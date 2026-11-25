@@ -8,7 +8,7 @@ A skill that has Claude make an AI micro drama in your [Avatrix](https://avatrix
 |---|---|---|---|
 | **novelinha** | Makes a short AI drama: a vertical series, in parts, with the same characters. In English, Spanish or Portuguese. | "make a novelinha" + the link to a micro drama that's going viral | The 3-to-5-part season sketched, the script to approve, the characters created in your account and each part edited as an mp4, one at a time |
 
-The other skill in this repository, **fabrica-de-reels**, only works in Portuguese for now.
+The other skill in this repository, **fabrica-de-reels**, only works in Portuguese for now: the install message and the steps are in the [Portuguese README](README.md#instalar-copie-uma-mensagem-e-cole-no-claude).
 
 ## What you need
 - **Claude**: the [claude.ai](https://claude.ai) website, the app in chat mode, or Claude Code (in the terminal).

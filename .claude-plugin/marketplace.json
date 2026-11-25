@@ -56,7 +56,7 @@
       "name": "fabrica-de-reels",
       "source": "./",
       "strict": false,
-      "version": "0.4.0",
+      "version": "0.5.0",
       "description": "Fábrica de reels de um personagem 100% IA na Avatrix: personagem, reel clonado do viral com 3 rodadas de crítica, versões do reel que bombou, post agendado e DM.",
       "skills": [
         "./skills/fabrica-de-reels"

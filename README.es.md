@@ -8,7 +8,7 @@ Una skill que hace que Claude cree una novela con IA en tu cuenta de [Avatrix](h
 |---|---|---|---|
 | **novelinha** | Hace una novela corta con IA: serie vertical, por partes, con los mismos personajes. En español, inglés o portugués. | "haz una novelinha" + el link de una novela que se esté haciendo viral | La temporada de 3 a 5 partes esbozada, el guion para aprobar, los personajes creados en tu cuenta y cada parte armada en mp4, una a la vez |
 
-La otra skill del repositorio, **fabrica-de-reels**, por ahora solo funciona en portugués.
+La otra skill del repositorio, **fabrica-de-reels**, por ahora solo funciona en portugués: el mensaje de instalación y los pasos están en el [README en portugués](README.md#instalar-copie-uma-mensagem-e-cole-no-claude).
 
 ## Qué necesitas
 - **Claude**: el sitio [claude.ai](https://claude.ai), la app en modo conversación o Claude Code (en la terminal).

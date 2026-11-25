@@ -23,7 +23,7 @@ confere "sem rede: até 3 s" "$([ $dur -le 3 ] && echo sim || echo "não ($dur s
 pub 1.3.0; roda cache "file://$T/publicada" >/dev/null; pub 9.9.9
 confere "cache: 2ª chamada no mesmo dia não consulta" "$(roda cache "file://$T/publicada" | grep -o 'v1.3.0' | head -1)" "v1.3.0"
 
-confere "endereço não definido: calado" "$(CLAUDE_PLUGIN_ROOT="$T/raiz" CLAUDE_PLUGIN_DATA="$T/d0" bash "$H" x)" ""
+confere "endereço que não existe: calado" "$(roda d0 "file://$T/nao-existe")" ""
 confere "skill inexistente: calado" "$(CLAUDE_PLUGIN_ROOT="$T/raiz" CLAUDE_PLUGIN_DATA="$T/d1" AVISO_URL="file://$T/publicada" bash "$H" nada)" ""
 
 [ $falhas -eq 0 ] && echo "teste ok: aviso de versão" || { echo "$falhas falha(s)"; exit 1; }
