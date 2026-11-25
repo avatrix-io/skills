@@ -14,17 +14,17 @@ La otra skill del repositorio, **fabrica-de-reels**, por ahora solo funciona en 
 - **Claude**: el sitio [claude.ai](https://claude.ai), la app en modo conversación o Claude Code (en la terminal).
 - **Una cuenta en Avatrix** con créditos.
 
-## Instalar: pega un mensaje en Claude Code
+## Instalar: copia un mensaje y pégalo en Claude
 
-Abre Claude Code (en la terminal o en la app) en la carpeta donde quieres trabajar y pega:
+El mismo mensaje sirve en Claude Code y en el sitio o la app de Claude. Abre Claude (en Claude Code, en la carpeta donde quieres trabajar) y pega:
 
 ```text
-Instálame la skill novelinha de Avatrix: clona https://github.com/avatrix-io/skills, lee el INSTALL.md de ahí y sigue los pasos. Al final, dime qué escribo para empezar.
+Instálame la skill novelinha de Avatrix. Los pasos están en https://raw.githubusercontent.com/avatrix-io/skills/main/INSTALL.md: léelo y síguelo. En Claude Code, hazlo todo tú. En el sitio o la app de Claude, guíame en los clics, uno a la vez: descargar https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip, cargarlo en Personalizar > Habilidades y añadir el conector de Avatrix con la URL https://avatrix.io/mcp. Al final, dime qué escribo para empezar.
 ```
 
-Claude descarga, instala, conecta Avatrix y te dice qué escribir. Tú solo entras a tu cuenta de Avatrix cuando te lo pida. No pide contraseña. Lo que hace con el mensaje está en el [INSTALL.md](INSTALL.md) (en portugués; Claude lo lee igual).
+En Claude Code, Claude descarga, instala, conecta Avatrix y te dice qué escribir. En el sitio, te guía clic por clic. Tú solo entras a tu cuenta de Avatrix cuando te lo pida. No pide contraseña. Lo que hace con el mensaje está en el [INSTALL.md](INSTALL.md) (en portugués; Claude lo lee igual).
 
-**En el sitio de Claude (claude.ai) el mensaje no funciona:** ahí Claude no instala skills solo. Usa el zip, aquí abajo.
+¿Prefieres hacerlo tú? Los clics están aquí abajo.
 
 ### En el sitio o en la app de Claude (sin terminal)
 1. Descarga el archivo de la skill: [novelinha.zip](https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip).

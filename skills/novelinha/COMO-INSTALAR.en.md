@@ -6,16 +6,16 @@ The skill makes everything in your **Avatrix** account and runs in two places: o
 
 Button names are the ones in Claude's help center (November 2026). If your screen shows a different name, use the one you see.
 
-## The easiest way: paste this message into Claude Code
-Open Claude Code (in the terminal or the app) in the folder where you want to work and paste:
+## The easiest way: paste this message into Claude
+It works in Claude Code and on the Claude website or app. Open Claude (in Claude Code, in the folder where you want to work) and paste:
 
 ```text
-Install the Avatrix novelinha skill for me: clone https://github.com/avatrix-io/skills, read the INSTALL.md there and follow the steps. When you finish, tell me what to type to start.
+Install the Avatrix novelinha skill for me. The steps are at https://raw.githubusercontent.com/avatrix-io/skills/main/INSTALL.md: read and follow them. In Claude Code, do everything yourself. On the Claude website or app, walk me through the clicks one at a time: download https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip, upload it in Customize > Skills and add the Avatrix connector with the URL https://avatrix.io/mcp. When you finish, tell me what to type to start.
 ```
 
 It downloads, installs, connects Avatrix and stops so you can sign in to your account (`/mcp` > avatrix). It never asks for your password. Then, in a new session, type "make a novelinha".
 
-On the Claude website (claude.ai) the message doesn't work, because there Claude can't install skills by itself. Use the section below.
+On the Claude website (claude.ai), it walks you through the same clicks as the section below, one at a time.
 
 ## On the Claude website (nothing to install)
 1. **The skill:** on claude.ai, go to Customize > Skills, click **+** > Create skill > Upload a skill. Pick the `novelinha.zip` you downloaded from the repository's Releases page, as it came (no need to unzip it), and confirm. The "novelinha" skill shows up turned on.

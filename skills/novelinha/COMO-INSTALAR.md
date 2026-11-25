@@ -4,16 +4,16 @@
 
 A skill gera tudo na sua conta da **Avatrix** e roda em dois lugares: no **site do Claude** (claude.ai, ou o aplicativo do Claude no modo conversa), só clicando, ou no **Claude Code** (o Claude no computador, que roda comandos). Usa o site? Siga só a parte "No site do Claude" e pule o resto. Nada de terminal.
 
-## O jeito mais fácil: cole esta mensagem no Claude Code
-Abra o Claude Code (no terminal ou no app) na pasta onde você quer trabalhar e cole:
+## O jeito mais fácil: cole esta mensagem no Claude
+Serve no Claude Code e no site ou no app do Claude. Abra o Claude (no Claude Code, na pasta onde você quer trabalhar) e cole:
 
 ```text
-Instala pra mim a skill novelinha da Avatrix: clona https://github.com/avatrix-io/skills, lê o INSTALL.md de lá e segue os passos. No fim, me diz o que eu digito pra começar.
+Instala pra mim a skill novelinha da Avatrix. O passo a passo está em https://raw.githubusercontent.com/avatrix-io/skills/main/INSTALL.md: lê e segue. No Claude Code, faz tudo sozinho. No site ou no app do Claude, me guia nos cliques, um por vez: baixar https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip, subir em Personalização > Skills e ligar o conector da Avatrix com o endereço https://avatrix.io/mcp. No fim, me diz o que eu digito pra começar.
 ```
 
 Ele baixa, instala, liga a Avatrix e para pra você entrar na sua conta (`/mcp` > avatrix). Ele não pede senha. Depois, numa sessão nova, escreva "faz uma novelinha".
 
-No site do Claude (claude.ai) a mensagem não funciona, porque lá o Claude não instala skill sozinho. Use a parte abaixo.
+No site do Claude (claude.ai), ele te guia nos mesmos cliques da parte abaixo, um de cada vez.
 
 ## No site do Claude (sem instalar nada)
 1. **A skill:** no claude.ai, clique no seu nome > Personalização > Skills > Adicionar skill > Fazer upload. Escolha o `novelinha.zip` que você baixou na página de versões do repositório (Releases), do jeito que veio (não precisa abrir) e confirme. A skill "novelinha" aparece ligada.

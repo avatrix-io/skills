@@ -13,28 +13,28 @@ Duas skills que fazem o Claude criar vídeo com IA na sua conta da [Avatrix](htt
 - **O Claude**: o site [claude.ai](https://claude.ai), o aplicativo no modo conversa ou o Claude Code (no terminal).
 - **Uma conta na Avatrix** com crédito.
 
-## Instalar: cole uma mensagem no Claude
+## Instalar: copie uma mensagem e cole no Claude
 
-Abra o Claude Code (no terminal ou no app) na pasta onde você quer trabalhar e cole a mensagem da skill que você quer. Ele baixa, instala, liga a Avatrix e te diz o que digitar. Você só entra na sua conta da Avatrix quando ele pedir.
+A mesma mensagem serve no Claude Code e no site ou no app do Claude. Abra o Claude (no Claude Code, na pasta onde você quer trabalhar), cole a mensagem da skill que você quer e responda o que ele perguntar. No Claude Code ele baixa, instala, liga a Avatrix e te diz o que digitar. No site, ele te guia clique por clique: baixar o zip, subir a skill, ligar a Avatrix e liberar a internet que ela precisa. Você só entra na sua conta da Avatrix quando ele pedir.
 
 **Novelinha:**
 ```text
-Instala pra mim a skill novelinha da Avatrix: clona https://github.com/avatrix-io/skills, lê o INSTALL.md de lá e segue os passos. No fim, me diz o que eu digito pra começar.
+Instala pra mim a skill novelinha da Avatrix. O passo a passo está em https://raw.githubusercontent.com/avatrix-io/skills/main/INSTALL.md: lê e segue. No Claude Code, faz tudo sozinho. No site ou no app do Claude, me guia nos cliques, um por vez: baixar https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip, subir em Personalização > Skills e ligar o conector da Avatrix com o endereço https://avatrix.io/mcp. No fim, me diz o que eu digito pra começar.
 ```
 
 **Fábrica de reels:**
 ```text
-Instala pra mim a skill fabrica-de-reels da Avatrix: clona https://github.com/avatrix-io/skills, lê o INSTALL.md de lá e segue os passos. No fim, me diz o que eu digito pra começar.
+Instala pra mim a skill fabrica-de-reels da Avatrix. O passo a passo está em https://raw.githubusercontent.com/avatrix-io/skills/main/INSTALL.md: lê e segue. No Claude Code, faz tudo sozinho. No site ou no app do Claude, me guia nos cliques, um por vez: baixar https://github.com/avatrix-io/skills/releases/latest/download/fabrica-de-reels.zip, subir em Personalização > Skills e ligar o conector da Avatrix com o endereço https://avatrix.io/mcp. No fim, me diz o que eu digito pra começar.
 ```
 
 **As duas:**
 ```text
-Instala pra mim as duas skills da Avatrix, novelinha e fabrica-de-reels, cada uma na sua pasta: clona https://github.com/avatrix-io/skills, lê o INSTALL.md de lá e segue os passos. No fim, me diz o que eu digito pra começar em cada uma.
+Instala pra mim as duas skills da Avatrix, novelinha e fabrica-de-reels. O passo a passo está em https://raw.githubusercontent.com/avatrix-io/skills/main/INSTALL.md: lê e segue. No Claude Code, faz tudo sozinho, cada skill na sua pasta. No site ou no app do Claude, me guia nos cliques, um por vez: baixar https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip e https://github.com/avatrix-io/skills/releases/latest/download/fabrica-de-reels.zip, subir os dois em Personalização > Skills e ligar o conector da Avatrix com o endereço https://avatrix.io/mcp. No fim, me diz o que eu digito pra começar em cada uma.
 ```
 
-O que o Claude faz com a mensagem está no [INSTALL.md](INSTALL.md): baixa este repositório, instala a skill (pelo sistema de plugins do Claude Code, que já traz a trava do "sim" e o aviso de versão nova), liga a conexão da Avatrix e para pra você fazer o login. Ele não pede senha.
+O que o Claude faz com a mensagem está no [INSTALL.md](INSTALL.md): no Claude Code, baixa este repositório, instala a skill (pelo sistema de plugins, que já traz a trava do "sim" e o aviso de versão nova), liga a conexão da Avatrix e para pra você fazer o login; no site, te passa os cliques abaixo, um de cada vez. Ele não pede senha.
 
-**No site do Claude (claude.ai) a mensagem não funciona:** lá o Claude não instala skill sozinho. Use o zip, logo abaixo.
+Prefere fazer sozinho? Os cliques estão logo abaixo.
 
 ### No site ou no aplicativo do Claude, modo conversa (zip)
 1. Baixe o arquivo da skill: [novelinha.zip](https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip) ou [fabrica-de-reels.zip](https://github.com/avatrix-io/skills/releases/latest/download/fabrica-de-reels.zip).

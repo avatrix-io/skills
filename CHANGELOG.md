@@ -1,5 +1,17 @@
 # Changelog
 
+## fabrica-de-reels 0.4.0
+- **3 rodadas de crítica em todo reel**, cada uma antes do gasto que ela protege: o roteiro antes do "sim" do reel, as falas antes de pagar o vídeo e o reel montado antes de te mostrar. Em cada rodada, 3 críticos independentes (no Claude Code, subagentes; no site, o Claude faz um por vez); até 3 voltas, consertando só o que mata. Fica tudo em `criticas.md`, na pasta do reel. Regras em `references/criticos.md`.
+- **Mecanismo ou casca:** antes do roteiro, a skill separa o que faz o viral prender (sai do vídeo, ele para de funcionar) do que é só enfeite. O roteiro copia o mecanismo, no mesmo lugar e no mesmo tempo, e não copia a casca nem o produto do outro.
+- **A abertura não entrega o como:** os 3 primeiros segundos mostram o que a pessoa ganha ou o problema; o ingrediente, o passo ou o nome do método ficam pro meio.
+- **A fala não desmente a imagem** e não inventa número, prazo nem fato que o viral não tem. O gancho escrito usa a mesma palavra que o personagem fala.
+- **Fala comida:** 3 ou mais palavras seguidas faltando na fala gerada refaz a fala antes do vídeo (a fala é barata; o vídeo não).
+- **O quadro 0 à parte** (é a capa no feed) e o ritmo da abertura medido contra o do resto do reel.
+- **Versões do vencedor:** "faz versões desse reel que bombou" faz reels novos a partir de um que foi bem acima da média do perfil, trocando juntos o lugar, o que se vê nos 3 primeiros segundos e o gancho (tirados de outro viral real do mesmo tema), com a mesma receita e a mesma palavra pra comentar. Regras em `references/versoes-do-vencedor.md`.
+
+## Instalação por mensagem, também no site do Claude
+- A mensagem pronta pra colar agora serve no Claude Code e no site ou no app do Claude. No Claude Code ele instala sozinho; no site, ele lê o passo a passo e te guia clique por clique (baixar o zip, subir a skill, ligar a Avatrix e liberar a internet que ela precisa).
+
 ## novelinha 1.7.1
 - Novela em espanhol e em inglês, além do português (que continua o padrão). A skill conversa no idioma em que você escreve e grava o idioma da série no `estado.json` (`pt`, `es` ou `en`): a fala, a voz, o país dos personagens, as hashtags, a legenda e o "PART 2?" do fim saem no idioma escolhido. Tudo o que muda de um idioma pro outro está em `references/idioma.md`. Em conversa em espanhol ou inglês, a skill não fala do curso (ele é em português).
 - A trava do "sim" no Claude Code aceita "sí" e "yes" (e "si" sozinho ou "si," no começo da resposta). "Si quieres...", "me gusta" e "nice" não liberam gasto. Teste em `tests/test_trava_sim.sh`.

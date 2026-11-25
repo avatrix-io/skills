@@ -1,8 +1,22 @@
 # Instalação feita pelo agente
 
-Este arquivo é pra você, agente (Claude Code no terminal ou no app). O usuário colou uma mensagem pedindo pra instalar uma skill da Avatrix. Siga os passos na ordem, fale com ele no idioma em que ele escreveu (português, espanhol ou inglês), simples, e diga antes o que cada comando faz.
+Este arquivo é pra você, agente. O usuário colou uma mensagem pedindo pra instalar uma skill da Avatrix. Fale com ele no idioma em que ele escreveu (português, espanhol ou inglês), simples.
 
-Regras:
+**Onde você está?** Tem terminal (Claude Code, no terminal ou no app)? Pule pra "Regras" e siga os passos 0 a 7, dizendo antes o que cada comando faz. Está no site do Claude (claude.ai) ou no app no modo conversa, sem terminal? Siga só a parte "No site ou no app do Claude", logo abaixo. Você não consegue instalar skill no site sozinho: o usuário clica, você guia.
+
+## No site ou no app do Claude (sem terminal)
+Mande um passo por mensagem e espere ele dizer "feito" (ou o que apareceu na tela) antes do próximo. Se o nome de um botão na tela dele for outro, siga o que ele vê. Português abaixo; em espanhol a Personalização é "Personalizar" e Skills é "Habilidades"; em inglês, "Customize" e "Skills".
+1. **Baixar a skill:** "Clica neste link e salva o arquivo, sem abrir: https://github.com/avatrix-io/skills/releases/latest/download/<skill>.zip". Pedido das duas skills: os dois links (`novelinha.zip` e `fabrica-de-reels.zip`).
+2. **Subir a skill:** "Na barra do lado, clica em Personalização > Skills > Adicionar skill > Fazer upload e escolhe o zip que baixou, do jeito que veio." Duas skills: um zip de cada vez. Tem que aparecer a skill ligada. Se não aparecer Skills no menu, a criação de arquivos está desligada: passo 4 primeiro.
+3. **Ligar a Avatrix:** "Ainda em Personalização, clica em Conectores > Adicionar conector > personalizado. No nome, escreve Avatrix; no endereço, cola https://avatrix.io/mcp. Clica em Adicionar e em Vincular, entra na sua conta da Avatrix e clica em Permitir. Tem que aparecer Conectado." Sem conta: ele cria uma em https://avatrix.io e volta.
+4. **Liberar a internet pra Avatrix:** "Clica no seu nome > Configurações > Recursos. Confere que a criação de arquivos está ligada. Liga o Permitir acesso de rede externo, escolhe Só gerenciadores de pacotes e, nos domínios permitidos, cola *.avatrix.io." Sem o campo dos domínios, a conta do Claude dele ainda não tem essa opção: diga isso e siga.
+5. **Fechar:** "Agora abre uma conversa nova (a internet liberada só vale em conversa nova) e escreve: faz uma novelinha" (novelinha; em espanhol `haz una novelinha`, em inglês `make a novelinha`) ou "cria meu personagem" (fábrica de reels). Diga também que, ao gerar, o site pede "Permitir uma vez": é o certo pra imagem, voz e vídeo; pra ler a conta pode "Sempre permitir".
+
+Nunca mande abrir terminal, rodar comando ou instalar programa no site. O passo a passo com mais detalhe está no `COMO-INSTALAR.md` de cada skill, parte "No site do Claude".
+
+## No Claude Code
+
+### Regras
 - Não peça senha nem token, e não digite login por ele. O único passo que é dele é entrar na conta da Avatrix (passo 5).
 - Rode comandos só pra esta instalação: o clone deste repositório, os comandos `claude plugin` e `claude mcp`, e a cópia da pasta da skill pro projeto. Nada de apagar ou mexer em outros arquivos do usuário.
 - Não gere imagem nem vídeo durante a instalação. Ela não gasta crédito.

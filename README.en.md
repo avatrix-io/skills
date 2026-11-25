@@ -14,17 +14,17 @@ The other skill in this repository, **fabrica-de-reels**, only works in Portugue
 - **Claude**: the [claude.ai](https://claude.ai) website, the app in chat mode, or Claude Code (in the terminal).
 - **An Avatrix account** with credits.
 
-## Install: paste a message into Claude Code
+## Install: copy a message and paste it into Claude
 
-Open Claude Code (in the terminal or the app) in the folder where you want to work and paste:
+The same message works in Claude Code and on the Claude website or app. Open Claude (in Claude Code, in the folder where you want to work) and paste:
 
 ```text
-Install the Avatrix novelinha skill for me: clone https://github.com/avatrix-io/skills, read the INSTALL.md there and follow the steps. When you finish, tell me what to type to start.
+Install the Avatrix novelinha skill for me. The steps are at https://raw.githubusercontent.com/avatrix-io/skills/main/INSTALL.md: read and follow them. In Claude Code, do everything yourself. On the Claude website or app, walk me through the clicks one at a time: download https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip, upload it in Customize > Skills and add the Avatrix connector with the URL https://avatrix.io/mcp. When you finish, tell me what to type to start.
 ```
 
-Claude downloads it, installs it, connects Avatrix and tells you what to type. You only sign in to your Avatrix account when it asks. It never asks for your password. What it does with the message is in [INSTALL.md](INSTALL.md) (in Portuguese; Claude reads it all the same).
+In Claude Code, Claude downloads it, installs it, connects Avatrix and tells you what to type. On the website, it walks you through each click. You only sign in to your Avatrix account when it asks. It never asks for your password. What it does with the message is in [INSTALL.md](INSTALL.md) (in Portuguese; Claude reads it all the same).
 
-**On the Claude website (claude.ai) the message doesn't work:** there Claude can't install skills by itself. Use the zip, below.
+Rather do it yourself? The clicks are below.
 
 ### On the Claude website or app (no terminal)
 1. Download the skill file: [novelinha.zip](https://github.com/avatrix-io/skills/releases/latest/download/novelinha.zip).

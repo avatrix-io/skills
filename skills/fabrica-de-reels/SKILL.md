@@ -1,6 +1,6 @@
 ---
 name: fabrica-de-reels
-description: Fábrica de reels de um personagem 100% IA na Avatrix, de ponta a ponta. Cria o personagem do jeito certo (com ofício, marca, jeito, lugar, voz, um porquê e um inimigo, nunca um rosto sorteado), clona um reel viral pra ele (link do viral → reel montado, com legenda, gancho e a palavra pra comentar escritos), agenda pelo Piloto Automático, liga a DM automática e mede no dia seguinte. Imagem, voz e vídeo saem só da Avatrix, com os modelos de vídeo Persona Pro (primeiro) e Avatar Pro (só quando o primeiro não pode gerar). Use quando o aluno disser "cria meu personagem", "cria um personagem igual esse perfil", "clona esse reel pro meu personagem", "faz um reel desse viral", "agenda o reel", "liga a DM", "fabrica dm", "como foi o reel de ontem", "fabrica continua", "continua o reel". NÃO use pra novelinha com vários personagens em partes (skill novelinha), anúncio de produto do Studio, carrossel nem foto solta do personagem.
+description: Fábrica de reels de um personagem 100% IA na Avatrix, de ponta a ponta. Cria o personagem do jeito certo (com ofício, marca, jeito, lugar, voz, um porquê e um inimigo, nunca um rosto sorteado), clona um reel viral pra ele (link do viral → reel montado, com legenda, gancho e a palavra pra comentar escritos, passando por 3 rodadas de crítica), faz versões do reel que bombou, agenda pelo Piloto Automático, liga a DM automática e mede no dia seguinte. Imagem, voz e vídeo saem só da Avatrix, com o modelo de vídeo Persona Pro e, quando ele não pode gerar, o Avatar Pro. Use quando o aluno disser "cria meu personagem", "cria um personagem igual esse perfil", "clona esse reel pro meu personagem", "faz um reel desse viral", "agenda o reel", "liga a DM", "fabrica dm", "como foi o reel de ontem", "fabrica continua", "continua o reel", "faz versões desse reel que bombou". NÃO use pra novelinha com vários personagens em partes (skill novelinha), anúncio de produto do Studio, carrossel nem foto solta do personagem.
 ---
 
 # Fábrica de reels
@@ -27,6 +27,8 @@ S = a pasta deste arquivo. A versão está em S/VERSION. A pasta de trabalho é 
 | 2. Geração (passos 5 a 7) | roteiro aprovado e "sim" pro gasto do reel | S/references/geracao.md (prompts em S/references/prompts.md) |
 | 3. Conferir e montar (passos 8 a 10) | todas as cenas geradas | S/references/conferir-e-montar.md |
 | 4. Postar, DM e medir (passos 11 a 15) | reel aprovado, post agendado, "fabrica dm", ou 24 h depois do post | S/references/postar-dm-medir.md |
+| Críticas (nas fases 1, 2 e 3) | antes do "sim" do reel, antes do vídeo e antes de mostrar o reel | S/references/criticos.md |
+| Versões do vencedor | "faz versões desse reel que bombou", "oxigena o vencedor", reel com 2 vezes a mediana do perfil | S/references/versoes-do-vencedor.md |
 
 **`fabrica continua` / `continua o reel`:** leia o estado e siga do `passo` gravado no reel. Antes de gerar qualquer coisa, cruze o `cenas` do reel com `list_tasks` (`taskIds`): o que está pronto ou ainda gerando não se gera de novo. Sem estado (no site, conversa nova): "Conversa nova no site".
 **`fabrica dm`:** só a Volta da DM (S/references/postar-dm-medir.md), sem o cabeçalho da primeira mensagem: confere, liga o que falta e responde em 1 linha (ou nada, se não havia o que ligar). Nunca retoma geração.
@@ -48,10 +50,11 @@ S = a pasta deste arquivo. A versão está em S/VERSION. A pasta de trabalho é 
 5. **O que o aluno não disse, você não inventa.** Ficha inventada é pior que vazia: pergunte numa rodada só, com 3 sugestões pra cada coisa que falta.
 6. **Mostre as opções, não descarte por gosto seu.** Quem escolhe rosto, voz e versão é o aluno. **A voz é a que o aluno escolheu e está no estado** (`personagem.voz`). Se ela não aparece em `list_voices` ou a ferramenta recusa o id, PARE e diga isso ao aluno; nunca troque por outra voz "parecida" nem siga com a voz padrão.
 7. **Para só no que mata o reel.** Detalhe que não muda o entendimento não reprova cena.
-8. **Publicar não tem ensaio.** `schedule_post`, `republish_post`, `send_dm` e `reply_comment` executam de verdade, sem cotação: perfil, legenda e horário confirmados antes (S/references/postar-dm-medir.md, passo 13).
-9. **Português simples com o aluno**, frase curta. Nada de id, JSON, log nem URL de mídia crua quando há cartão na tela, exceto dentro da ficha do reel, que é pra copiar e colar. Fale "a palavra pra comentar" (não "CTA"), "o máximo que eu posso gastar" (não "teto"), "o modelo de vídeo" (não "motor"). Sem gênero pro aluno: "a regra que está na ficha", nunca "que você mesma pôs".
-10. **Conta sem Piloto Automático** (`list_posts`, `list_social_accounts`, `list_dm_automations`, `get_seats` e `get_piloto_results` devolvem "ainda não tem o Piloto Automático"): não é falha. Pule as checagens que dependem deles, use só o estado e a ficha, e siga.
-11. **Pergunta de dinheiro.** Se o aluno perguntar, por conta própria, como ganhar dinheiro com o personagem, o que vender ou que oferta pôr no link, responda curto e feche com a frase de S/references/proximo-passo.md §Quando o aluno perguntar de dinheiro. Fora disso, o assunto só aparece uma vez, depois do primeiro reel aprovado (passo 10). Já é aluno do curso: não fale disso.
+8. **3 rodadas de crítica em todo reel** (S/references/criticos.md): o roteiro antes do "sim", as falas antes do vídeo, o reel montado antes de mostrar. Cada rodada com 3 críticos independentes (no Claude Code, subagentes; no site, você mesmo, um por vez, em bloco separado), até 3 voltas, consertando só o que mata. A nota é da versão: mudou o roteiro ou o reel, a crítica antiga não vale. Fiel ao viral é copiar o mecanismo (o que para de prender se você tira), nunca a casca nem o valor do outro.
+9. **Publicar não tem ensaio.** `schedule_post`, `republish_post`, `send_dm` e `reply_comment` executam de verdade, sem cotação: perfil, legenda e horário confirmados antes (S/references/postar-dm-medir.md, passo 13).
+10. **Português simples com o aluno**, frase curta. Nada de id, JSON, log nem URL de mídia crua quando há cartão na tela, exceto dentro da ficha do reel, que é pra copiar e colar. Fale "a palavra pra comentar" (não "CTA"), "o máximo que eu posso gastar" (não "teto"), "o modelo de vídeo" (não "motor"). Sem gênero pro aluno: "a regra que está na ficha", nunca "que você mesma pôs".
+11. **Conta sem Piloto Automático** (`list_posts`, `list_social_accounts`, `list_dm_automations`, `get_seats` e `get_piloto_results` devolvem "ainda não tem o Piloto Automático"): não é falha. Pule as checagens que dependem deles, use só o estado e a ficha, e siga.
+12. **Pergunta de dinheiro.** Se o aluno perguntar, por conta própria, como ganhar dinheiro com o personagem, o que vender ou que oferta pôr no link, responda curto e feche com a frase de S/references/proximo-passo.md §Quando o aluno perguntar de dinheiro. Fora disso, o assunto só aparece uma vez, depois do primeiro reel aprovado (passo 10). Já é aluno do curso: não fale disso.
 
 ## Quando ela para e chama o aluno
 - O "sim" pra ler o viral e o "sim" pro reel (ou o máximo do dia), e qualquer passo que passe do máximo.
@@ -59,13 +62,14 @@ S = a pasta deste arquivo. A versão está em S/VERSION. A pasta de trabalho é 
 - Perfil não ligado no Piloto, autorização caída ou conta sem Piloto.
 - Personagem sem voz salva; saldo menor que o reel.
 - A mesma cena falhou duas vezes: mostra as duas tentativas.
+- Depois da 3ª volta de uma rodada de crítica ainda sobra algo que mata: mostra o que é e o conserto sugerido.
 - O viral é um tema que o perfil postou nos últimos 14 dias.
 - Personagem com voz clonada e o Persona Pro não pode gerar (S/references/geracao.md).
 
 ## O estado (`fabrica/<personagem>/estado.json`)
 ```json
 {
-  "versao": "0.3.9",
+  "versao": "0.4.0",
   "personagem": {"id": "", "nome": "", "pronto": false, "passo": "A", "idioma": "pt-BR",
     "marcas": ["", "", ""], "objeto": "", "lugar": "",
     "fotos_fixas": {"rosto": "", "corpo": "", "lugar": "", "objeto": ""},
@@ -79,6 +83,7 @@ S = a pasta deste arquivo. A versão está em S/VERSION. A pasta de trabalho é 
     "maximo": 0, "previsto": 0, "gasto": 0,
     "personagem_id": "", "leitura": "", "troca_final": {"upload_audio": "", "troca_de_voz": ""},
     "cenas": {"01": {"fala": "", "imagem": "", "video": "", "modelo": "", "upload_audio": "", "troca_de_voz": "", "dur_fala": 0}},
+    "versao_de": "", "criticas": {"roteiro": false, "falas": false, "reel": false},
     "posts": [{"postId": "", "accountId": "", "horario": "", "dm_ligada": false, "medido": false}]}]
 }
 ```

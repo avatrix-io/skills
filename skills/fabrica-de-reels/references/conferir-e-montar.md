@@ -2,7 +2,7 @@
 
 **LÊ do estado:** o reel atual (`maximo`, `gasto`, `previsto`, `palavra`, `cenas`), `personagem` (fotos_fixas, voz); na pasta do reel: `cenas/`, `falas/`, `imagens/`, `viral/`, `roteiro.md`.
 **GRAVA no estado:** `passo` e `gasto` do reel (e o taskId de cena refeita, na hora). Na pasta do reel: `conferencia.md`, `legendas.json`, `reel.mp4`, `ficha-postagem.md`.
-**PRONTO QUANDO:** o aluno viu o reel e o viral e aprovou ("ok").
+**PRONTO QUANDO:** o reel passou na rodada 3 de crítica (S/references/criticos.md) e o aluno viu o reel e o viral e aprovou ("ok").
 
 ## 8. Conferir cada cena e refazer só o que mata o reel (0 crédito, salvo refação)
 **Pelo som** (medido, não no olho), em cada `cenas/NN.mp4`:
@@ -43,10 +43,11 @@
    - Volte a voz pro vídeo, com +5 dB (a troca sai uns 6 dB mais baixa): `ffmpeg -y -i reel.mp4 -i vozes/reel-nova.mp3 -map 0:v -map 1:a -c:v copy -af volume=5dB -c:a aac -shortest reel-voz.mp4`, e daqui em diante o reel é o `reel-voz.mp4`.
    - Confira: `python3 S/scripts/medir_voz.py tom reel-voz.mp4 --ref <personagem.voz.tom_hz>` dentro de 1,5 semitom, e ouça uma vez: o texto tem de ser o mesmo.
 5. Assista o reel inteiro antes de mostrar: é na emenda que aparece o que uma cena sozinha esconde (palavra cortada, pulo de volume, gancho em cima do rosto).
+6. **Rodada 3 de crítica** (S/references/criticos.md): a tabela viral × nosso, os 3 críticos, o quadro 0 à parte e o ritmo da abertura contra o do corpo (corte os 3 primeiros segundos com `ffmpeg -t 3` e o resto com `ffmpeg -ss 3`, e meça os dois com `python3 S/scripts/medir_voz.py ritmo <trecho> "<as palavras que caem nele, de legendas.json>"`). Abertura mais lenta que o corpo mata: aperte ou corte a 1ª cena e monte de novo. Conserte o que mata e grave em `criticas.md`.
 
 ## 10. Entregar pra olhar
 - **Os dois vídeos na conversa:** o viral (`viral/viral.mp4`) e o reel (`reel.mp4`), um depois do outro, pra ouvir e ver. No site do Claude, os dois como arquivo pra baixar; no Claude Code, abra os dois no player do computador.
 - **A conta:** gasto de verdade contra o previsto, parte por parte ("fala <N> · imagens <N> · vídeo <N> = <N> de <máximo>").
 - **Ficha de postagem** (`ficha-postagem.md`): legenda, gancho, a palavra pra comentar, primeiro comentário por rede, título do YouTube, texto da DM e o botão. Como escrever: S/references/postar-dm-medir.md, passo 12.
-- Linha pro aluno: "Reel pronto: <N> s · <N> cenas · gastei <N> de <máximo> créditos · palavra pra comentar: <PALAVRA>. Aprova? Responde ok que eu sigo pra postagem."
+- Linha pro aluno: "Reel pronto: <N> s (o viral tem <N>) · <N> cenas · 3 rodadas de crítica, <N> consertos · gastei <N> de <máximo> créditos · palavra pra comentar: <PALAVRA>. Aprova? Responde ok que eu sigo pra postagem."
 - Aprovado: grave a palavra em `palavras_usadas` e siga pra S/references/postar-dm-medir.md. Se é o primeiro reel aprovado nesta conversa, antes de seguir: a frase de S/references/proximo-passo.md §Frase depois do primeiro resultado, uma vez só, com as regras de lá. Pediu mudança: conserte primeiro sem gastar (cortes, legenda, gancho, ordem); só por último refaça cena (com o preço dito e "sim").
